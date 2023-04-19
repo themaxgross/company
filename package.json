@@ -11,6 +11,8 @@
     "wrangler": "wrangler pages dev ./public"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.15",
+    "@fontsource/raleway": "^4.5.12",
     "@remix-run/cloudflare": "^1.15.0",
     "@remix-run/cloudflare-pages": "^1.15.0",
     "@remix-run/react": "^1.15.0",
