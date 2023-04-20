@@ -9,9 +9,9 @@ export default function PanelTwo() {
             I'm Leo Ji, a web developer and designer based in Chicago.
           </h2>
           <p className="text-md md:text-xl mb-2 md:mb-4">
-            I've built everything from simple landing pages to complex
-            applications. I'm passionate about building blazing fast websites
-            and delivering delightful designs for the web, one cat at a time.
+            Having everything from simple landing pages to complex applications,
+            I am passionate about building blazing fast websites and delivering
+            delightful designs for the web, one cat at a time.
           </p>
           <p className="text-md md:text-xl mb-2 md:mb-4">
             Cats not included with most projects.
