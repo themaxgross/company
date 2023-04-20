@@ -1,8 +1,6 @@
-import type { LoaderFunction } from "@remix-run/server-runtime";
-import { redirect } from "@remix-run/server-runtime";
-
 import { Fade } from "react-awesome-reveal";
 import type { V2_MetaFunction } from "@remix-run/react";
+import logo from "~/images/logos/lj.svg";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -22,6 +20,7 @@ export const Index = () => {
         <div className="py-12 px-4 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div>
             <Fade cascade={true} triggerOnce={true} duration={2000}>
+              <img src={logo} alt="" className="w-32 h-32 mb-12" />
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-6 md:mb-12 leading-tight">
                 Websites so fast, they'll make you meow.
               </h1>
