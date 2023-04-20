@@ -1,22 +1,10 @@
 import { Fade } from "react-awesome-reveal";
-import type { V2_MetaFunction } from "@remix-run/react";
 import logo from "~/images/logos/lj.svg";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: "Leo Ji LLC" },
-    {
-      name: "description",
-      content:
-        "Building blazing fast websites and beautiful designs for the web, one cat at a time.",
-    },
-  ];
-};
-
-export const Index = () => {
+export const PanelOne = () => {
   return (
-    <div className="bg-brand-primary dark:bg-gray-400 p-8 min-w-screen min-h-screen flex justify-stretch items-stretch">
+    <div className="bg-brand-primary dark:bg-neutral-200 p-8 min-w-screen min-h-screen flex justify-stretch items-stretch">
       <div className="bg-gray-200 text-slate-800 dark:bg-brand-primary dark:text-slate-100 flex flex-row w-full">
         <div className="py-12 px-4 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div>
@@ -42,4 +30,4 @@ export const Index = () => {
     </div>
   );
 };
-export default Index;
+export default PanelOne;
