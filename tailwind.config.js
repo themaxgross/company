@@ -31,6 +31,7 @@ module.exports = {
           900: "#0E1C38",
           950: "#091224",
         },
+        "brand-white": "#f4f6fb",
       },
     },
   },
