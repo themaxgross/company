@@ -16,15 +16,15 @@ export const meta: V2_MetaFunction = () => {
 export const Index = () => {
   return (
     <div className="bg-brand-primary p-8 min-w-screen min-h-screen flex justify-stretch items-stretch">
-      <div className="bg-gray-200 text-slate-800 flex flex-row font-raleway w-full">
+      <div className="bg-gray-200 text-slate-800 flex flex-row w-full">
         <div className="py-12 px-4 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div>
             <Fade cascade={true} triggerOnce={true} duration={2000}>
-              <img src={logo} alt="" className="w-32 h-32 mb-12" />
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-6 md:mb-12 leading-tight">
+              <img src={logo} alt="" className="w-32 h-32 mb-12 md:mb-16" />
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
                 Websites so fast, they'll make you meow.
               </h1>
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-6 md:mb-12 leading-tight">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
                 Designs so beautiful, they'll make you purr.
               </h1>
               <h2 className="text-xl md:text-2xl xl:text-3xl mb-6 md:mb-12">
