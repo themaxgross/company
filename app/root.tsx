@@ -85,7 +85,7 @@ const App = () => (
       />
       <link rel="manifest" href="/site.webmanifest" />
     </head>
-    <body className="font-raleway">
+    <body className="font-inter">
       <Outlet />
       <ScrollRestoration />
       <Scripts />
