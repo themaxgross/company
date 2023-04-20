@@ -36,7 +36,12 @@ export default function PanelTwo() {
         <div className="mt-6 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           <a
             href="mailto:hello@leoji.company"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-brand-primary-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+            hover:bg-brand-primary-500
+            focus-visible:outline
+            focus-visible:outline-2
+            focus-visible:outline-offset-2
+            focus-visible:outline-indigo-600"
           >
             Email me
           </a>
