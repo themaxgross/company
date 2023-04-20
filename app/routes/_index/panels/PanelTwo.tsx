@@ -21,7 +21,7 @@ export default function PanelTwo() {
             together, please{" "}
             <a
               href="mailto:hello@leoji.company"
-              className="text-brand-primary-800 hover:text-brand-primary-500"
+              className="text-brand-primary-800 hover:text-brand-primary-500 dark:text-brand-primary-200 dark:hover:text-brand-primary-500"
             >
               email me
             </a>
@@ -30,7 +30,7 @@ export default function PanelTwo() {
         </div>
       </div>
       <div className="mx-auto max-w-7xl py-12 sm:py-18 lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-2xl font-medium font-raleway tracking-tight text-gray-900 sm:text-3xl">
+        <h2 className="text-2xl font-medium font-raleway tracking-tight text-gray-900 dark:text-gray-200 sm:text-3xl">
           Ready to find out how to supercharge your business online?
         </h2>
         <div className="mt-6 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
