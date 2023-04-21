@@ -6,6 +6,7 @@ import Panel from "~/components/Panel";
 import PanelA from "./panels/PanelA";
 import PanelB from "./panels/PanelB";
 import PanelC from "./panels/PanelC";
+import PanelD from "./panels/PanelD";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -25,6 +26,7 @@ export default function Index() {
       <PanelA />
       <PanelB />
       <PanelC />
+      <PanelD />
       <Panel className="pb-2 md:pb-8" />
     </>
   );
