@@ -46,7 +46,7 @@ export default function FeaturesPanel() {
                 <h2 className="text-base font-medium font-raleway leading-7 uppercase text-brand-primary dark:text-brand-white">
                   Whiskers on kittens
                 </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
                   Working with me might be your new favorite thing.
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600"></p>
@@ -55,16 +55,16 @@ export default function FeaturesPanel() {
                 <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                   {features.map((feature) => (
                     <div key={feature.name} className="relative pl-16">
-                      <dt className="text-base font-semibold leading-7 text-gray-900">
-                        <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-primary-800 dark:bg-brand-white">
+                      <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-gray-200">
+                        <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-primary-800 dark:bg-brand-primary-700">
                           <feature.icon
-                            className="h-6 w-6 text-white"
+                            className="h-6 w-6 text-brand-white dark:text-brand-primary-50"
                             aria-hidden="true"
                           />
                         </div>
                         {feature.name}
                       </dt>
-                      <dd className="mt-2 text-base leading-7 text-gray-600">
+                      <dd className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
                         {feature.description}
                       </dd>
                     </div>
