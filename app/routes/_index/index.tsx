@@ -3,6 +3,7 @@ import React from "react";
 import PanelOne from "./panels/PanelOne";
 import PanelTwo from "./panels/PanelTwo";
 import PanelThree from "~/routes/_index/panels/PanelThree";
+import Panel from "~/components/Panel";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -28,9 +29,11 @@ const Divider = () => {
 export default function Index() {
   return (
     <>
+      <Panel className="pb-2 md:pb-8" />
       <PanelOne />
       <PanelTwo />
       <PanelThree />
+      <Panel className="pb-2 md:pb-8" />
     </>
   );
 }

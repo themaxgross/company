@@ -8,7 +8,7 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 export default function PanelTwo() {
   return (
     <Panel>
-      <div className="max-w-3xl mx-auto py-8 md:py-12">
+      <div className="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-12">
         <div className="">
           <div>
             <h2 className="text-xl md:text-2xl xl:text-3xl mb-3 md:mb-5 font-semibold tracking-tight">

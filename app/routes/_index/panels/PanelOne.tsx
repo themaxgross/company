@@ -5,7 +5,7 @@ import Panel from "~/components/Panel";
 
 export const PanelOne = () => {
   return (
-    <Panel className="pt-8 flex flex-row justify-stretch items-stretch">
+    <Panel className="flex flex-row justify-stretch items-stretch">
       <div className="w-full min-h-screen flex flex-row items-stretch justify-stretch">
         <div className="py-12 px-8 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div className="text-center sm:text-left">

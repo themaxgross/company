@@ -7,12 +7,16 @@ export default function Panel({
   inverted = false,
 }: {
   className?: string;
-  children: ReactNode;
+  children?: ReactNode;
   inverted?: boolean;
 }) {
   return (
     <div
-      className={clsx("bg-brand-primary dark:bg-gray-300", "px-8", className)}
+      className={clsx(
+        "bg-brand-primary dark:bg-gray-300",
+        "px-2 md:px-8",
+        className
+      )}
     >
       <div
         className={clsx(
