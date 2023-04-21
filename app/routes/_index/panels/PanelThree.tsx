@@ -1,10 +1,13 @@
 import cat from "~/images/_TLJ3167.jpg";
 import React from "react";
 import Panel from "~/components/Panel";
-import { Link } from "@remix-run/react";
+import { Link, useLocation, useSearchParams } from "@remix-run/react";
 import Button from "~/components/Button";
+import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
 
 export default function PanelThree() {
+  const debugMode = useSearchDebugParam();
+
   return (
     <Panel inverted={true}>
       <div className="flex flex-col lg:flex-row w-full justify-center items-center py-3 md:py-10 px-3 md:px-8">
@@ -27,11 +30,13 @@ export default function PanelThree() {
             I adopted him from the Humane Rescue Alliance in Washington, DC in
             2020 during the COVID-19 pandemic.
           </p>
-          <Link to="/troy" className="mt-2 md:mt-3">
-            <Button className="flex flex-row justify-center items-center">
-              <span className="mr-2">🐈</span> Learn more about Troy
-            </Button>
-          </Link>
+          {debugMode ? (
+            <Link to="/troy" className="mt-2 md:mt-3">
+              <Button className="flex flex-row justify-center items-center">
+                <span className="mr-2">🐈</span> Learn more about Troy
+              </Button>
+            </Link>
+          ) : null}
         </div>
       </div>
     </Panel>
