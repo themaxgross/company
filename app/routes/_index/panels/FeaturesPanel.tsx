@@ -35,7 +35,7 @@ const features = [
   },
 ] as const;
 
-export default function PanelD() {
+export default function FeaturesPanel() {
   return (
     <Panel>
       <div className="flex flex-col lg:flex-row w-full justify-center items-center py-3 md:py-10 px-3 md:px-8">

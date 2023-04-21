@@ -3,10 +3,10 @@ import React from "react";
 
 import Panel from "~/components/Panel";
 
-import PanelA from "./panels/PanelA";
-import PanelB from "./panels/PanelB";
-import PanelC from "./panels/PanelC";
-import PanelD from "./panels/PanelD";
+import HeadlinePanel from "./panels/HeadlinePanel";
+import IntroAboutPanel from "./panels/IntroAboutPanel";
+import TroyPanel from "./panels/TroyPanel";
+import FeaturesPanel from "./panels/FeaturesPanel";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -19,15 +19,19 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
+function SpacerPanel() {
+  return <Panel className="pb-2 md:pb-8" />;
+}
+
 export default function Index() {
   return (
     <>
-      <Panel className="pb-2 md:pb-8" />
-      <PanelA />
-      <PanelB />
-      <PanelC />
-      <PanelD />
-      <Panel className="pb-2 md:pb-8" />
+      <SpacerPanel />
+      <HeadlinePanel />
+      <IntroAboutPanel />
+      <TroyPanel />
+      <FeaturesPanel />
+      <SpacerPanel />
     </>
   );
 }

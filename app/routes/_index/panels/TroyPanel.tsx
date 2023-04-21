@@ -5,7 +5,7 @@ import { Link, useLocation, useSearchParams } from "@remix-run/react";
 import Button from "~/components/Button";
 import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
 
-export default function PanelC() {
+export default function TroyPanel() {
   const debugMode = useSearchDebugParam();
 
   return (
