@@ -7,6 +7,7 @@ import HeadlinePanel from "./panels/HeadlinePanel";
 import IntroAboutPanel from "./panels/IntroAboutPanel";
 import TroyPanel from "./panels/TroyPanel";
 import FeaturesPanel from "./panels/FeaturesPanel";
+import ContactPanel from "./panels/ContactPanel";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -31,6 +32,7 @@ export default function Index() {
       <IntroAboutPanel />
       <TroyPanel />
       <FeaturesPanel />
+      <ContactPanel />
       <SpacerPanel />
     </>
   );

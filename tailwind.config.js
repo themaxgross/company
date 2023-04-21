@@ -40,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-opentype")],
+  plugins: [require("tailwindcss-opentype"), require("@tailwindcss/forms")],
 };
