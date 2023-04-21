@@ -10,11 +10,11 @@ function Divider() {
   return (
     <div className="relative">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full max-w-5xl mx-auto border-t border-brand-white" />
+        <div className="w-full max-w-5xl mx-auto border-t-2 border-brand-primary dark:border-brand-white" />
       </div>
       <div className="relative flex justify-center">
-        <span className="bg-brand-primary p-1 text-brand-white">
-          <HiPencil className="h-5 w-5 text-brand-white" aria-hidden="true" />
+        <span className="bg-brand-primary border-x-4 border-brand-white dark:border-brand-primary dark:bg-brand-primary-700   p-2 text-brand-white">
+          <HiPencil className="h-5 w-5 text-brand-white " aria-hidden="true" />
         </span>
       </div>
     </div>
