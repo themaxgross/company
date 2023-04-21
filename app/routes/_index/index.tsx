@@ -2,6 +2,7 @@ import type { V2_MetaFunction } from "@remix-run/react";
 import React from "react";
 import PanelOne from "./panels/PanelOne";
 import PanelTwo from "./panels/PanelTwo";
+import PanelThree from "~/routes/_index/panels/PanelThree";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -26,12 +27,10 @@ const Divider = () => {
 
 export default function Index() {
   return (
-    <div className="bg-brand-primary dark:bg-brand-white p-8 min-w-screen min-h-screen flex flex-row justify-stretch items-stretch">
-      <div className="bg-gray-200 text-slate-800 dark:bg-brand-primary dark:text-slate-100 flex flex-col justify-stretch items-stretch w-full">
-        <PanelOne />
-        <Divider />
-        <PanelTwo />
-      </div>
-    </div>
+    <>
+      <PanelOne />
+      <PanelTwo />
+      <PanelThree />
+    </>
   );
 }
