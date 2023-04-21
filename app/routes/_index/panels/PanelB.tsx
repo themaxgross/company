@@ -5,7 +5,7 @@ import { Link } from "@remix-run/react";
 
 import { FaEnvelopeOpenText } from "react-icons/fa";
 
-export default function PanelTwo() {
+export default function PanelB() {
   return (
     <Panel>
       <div className="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-12">

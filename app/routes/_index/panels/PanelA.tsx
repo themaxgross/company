@@ -3,7 +3,7 @@ import logo from "~/images/logos/lj.svg";
 import React from "react";
 import Panel from "~/components/Panel";
 
-export const PanelOne = () => {
+export const PanelA = () => {
   return (
     <Panel className="flex flex-row justify-stretch items-stretch">
       <div className="w-full min-h-screen flex flex-row items-stretch justify-stretch">
@@ -30,4 +30,4 @@ export const PanelOne = () => {
     </Panel>
   );
 };
-export default PanelOne;
+export default PanelA;
