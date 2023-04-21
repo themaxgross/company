@@ -4,12 +4,30 @@ import Panel from "~/components/Panel";
 import { useForm } from "react-hook-form";
 import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
 
+import { HiPencil } from "react-icons/hi2";
+
+function Divider() {
+  return (
+    <div className="relative">
+      <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        <div className="w-full max-w-5xl mx-auto border-t border-brand-white" />
+      </div>
+      <div className="relative flex justify-center">
+        <span className="bg-brand-primary p-1 text-brand-white">
+          <HiPencil className="h-5 w-5 text-brand-white" aria-hidden="true" />
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function ContactFormlessPanel() {
   return (
-    <Panel>
-      <div className="max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-16">
-        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-200 sm:text-3xl sm:tracking-tight lg:text-4xl mb-3 md:mb-6">
-          Let's get started.
+    <Panel className="lg:text-center">
+      <Divider />
+      <div className="max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
+        <h2 className="text-2x font-raleway font-bold text-gray-900 dark:text-gray-200 sm:text-3xl sm:tracking-normal lg:text-4xl mb-3 md:mb-6">
+          Ready to create something great?
         </h2>
         <p className="text-gray-500 dark:text-gray-300 mb-5 md:mb-6 lg:mb-8 text-lg md:text-xl tracking-loose">
           Paw me at{" "}
