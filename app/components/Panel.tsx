@@ -27,7 +27,7 @@ export default function Panel({
           "w-full"
         )}
       >
-        {children}
+        <div className=" mx-auto max-w-10xl w-full">{children}</div>
       </div>
     </div>
   );

@@ -33,6 +33,11 @@ module.exports = {
         },
         "brand-white": "#f4f6fb",
       },
+      maxWidth: {
+        "8xl": "90rem",
+        "9xl": "100rem",
+        "10xl": "110rem",
+      },
     },
   },
   plugins: [require("tailwindcss-opentype")],
