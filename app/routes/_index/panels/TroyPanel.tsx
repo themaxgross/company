@@ -22,19 +22,10 @@ export default function TroyPanel() {
             className="w-full h-auto border-8 dark:border-brand-primary border-brand-white rounded"
             responsive={[
               {
-                size: { width: 100 },
-              },
-              {
-                size: { width: 300 },
-              },
-              {
-                size: { width: 600 },
-              },
-              {
-                size: { width: 900 },
-              },
-              {
-                size: { width: 1200 },
+                size: {
+                  width: 640,
+                },
+                maxWidth: 640,
               },
             ]}
           />
