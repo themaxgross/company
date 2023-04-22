@@ -1,5 +1,6 @@
 import type { ImageProps as RemixImageProps } from "remix-image";
 import { Image as RemixImage, cloudflareImagesLoader } from "remix-image";
+import { useHydrated } from "remix-utils";
 
 type ImageProps = RemixImageProps & {
   loader?: never;
@@ -12,8 +13,11 @@ export default function Image({
   responsive,
   src,
   options,
+
   ...props
 }: ImageProps) {
+  const isHydrated = useHydrated();
+
   const isDev = process.env.NODE_ENV === "development";
   const useCloudflare = !isDev;
 
@@ -21,6 +25,10 @@ export default function Image({
   // and we need to add the domain to the src
   if (useCloudflare && src && !src.startsWith("http")) {
     src = `${domain}${src}`;
+  }
+
+  if (!isHydrated || !useCloudflare) {
+    return <RemixImage {...props} src={src} responsive={undefined} />;
   }
 
   return (
@@ -32,7 +40,7 @@ export default function Image({
         background: undefined,
       }}
       loader={cloudflareImagesLoader}
-      responsive={useCloudflare ? responsive : undefined}
+      responsive={responsive}
     />
   );
 }
