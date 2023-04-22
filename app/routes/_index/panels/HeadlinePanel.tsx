@@ -8,8 +8,7 @@ import socialShareDefaultImage from "~/images/logos/social-share-default.png";
 export const meta: V2_MetaFunction = () => {
   return [
     {
-      title:
-        "Leo Ji LLC, a paw-some boutique web design and development studio",
+      title: "Leo Ji, a paw-some boutique web developer and designer",
     },
     {
       name: "description",
@@ -18,8 +17,7 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       name: "og:title",
-      content:
-        "Leo Ji LLC, a paw-some boutique web design and development studio",
+      content: "Leo Ji, a paw-some boutique web developer and designer",
     },
     {
       name: "og:description",
