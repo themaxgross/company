@@ -21,6 +21,7 @@ import Button from "~/components/Button";
 import { ADOBE_FONTS_URL } from "~/constants/urls";
 
 import remixImageStyles from "remix-image/remix-image.css";
+import Image from "~/components/Image";
 
 export const links: LinksFunction = () => {
   return [
@@ -85,7 +86,7 @@ export function ErrorBoundary() {
         <AppLayout>
           <div className="w-screen h-screen flex flex-col justify-center items-center">
             <figure className="mb-8 flex flex-col-reverse">
-              <img
+              <Image
                 src={catBox}
                 alt="Cat in a box"
                 className="w-full max-w-xl h-auto py-1"
@@ -101,10 +102,10 @@ export function ErrorBoundary() {
                 </a>
               </figcaption>
             </figure>
-            <h1 className="text-4xl font-semibold font-raleway mb-2 md:mb-4">
+            <h1 className="text-5xl font-semibold font-futura mb-2 md:mb-4">
               Kitty! Where are you going?
             </h1>
-            <h2 className="text-2xl font-regular mb-2 md:mb-4">
+            <h2 className="text-2xl font-regular font-raleway mb-4 md:mb-6">
               This page doesn't exist.
             </h2>
             <Link to="/">
