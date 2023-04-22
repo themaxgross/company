@@ -1,3 +1,7 @@
+@import "@fontsource/inter/variable-full.css";
+@import "@fontsource/raleway/variable.css";
+@import "@fontsource/raleway/variable-italic.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
