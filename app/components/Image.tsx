@@ -27,7 +27,7 @@ export default function Image({
     src = `${domain}${src}`;
   }
 
-  if (!isHydrated || !useCloudflare) {
+  if (!useCloudflare) {
     return <RemixImage {...props} src={src} responsive={undefined} />;
   }
 
