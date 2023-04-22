@@ -28,7 +28,11 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       name: "og:image",
-      content: socialShareDefaultImage,
+      content: `//leoji.company${socialShareDefaultImage}`,
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
     },
   ];
 };
