@@ -26,7 +26,7 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: `https://leoji.company/${socialShareDefaultImage}`,
+      content: socialShareDefaultImage,
     },
   ];
 };
@@ -45,8 +45,8 @@ export const HeadlinePanel = () => {
                 Designs that are beyond purr-fect.
               </h1>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                From a full-stack web developer and designer offering a
-                paw-to-tail boutique service like no other.
+                All delivered by a full-stack web developer and designer with a
+                paw-to-tail boutique service offering like no other.
               </h2>
               <div className="relative">
                 <img

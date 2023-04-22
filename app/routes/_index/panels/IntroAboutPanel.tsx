@@ -23,8 +23,8 @@ export default function IntroAboutPanel() {
               I offer boutique web development and design services for
               individuals and small businesses, with deep experience in{" "}
               <strong>React</strong>, <strong>Next.js</strong>,{" "}
-              <strong>Remix</strong>, <strong>Shopify</strong>,{" "}
-              <strong>WordPress</strong>, and <strong>WooCommerce</strong>.
+              <strong>Remix</strong>, <strong>WordPress</strong>, and{" "}
+              <strong>WooCommerce</strong>.
             </p>
           </div>
         </div>

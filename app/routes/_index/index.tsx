@@ -1,4 +1,3 @@
-import type { V2_MetaFunction } from "@remix-run/react";
 import React from "react";
 
 import Panel from "~/components/Panel";
