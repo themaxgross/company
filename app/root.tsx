@@ -71,10 +71,18 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/wuf0dhh.css"
+          type="text/css"
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
+
+        {/* Fixed links not managed by Remix */}
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"

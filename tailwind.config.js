@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
       raleway: ["Raleway", "sans-serif"],
+      futura: ["Futura PT", "Futura", "sans-serif"],
     },
     extend: {
       animation: {
