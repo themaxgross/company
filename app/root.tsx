@@ -18,10 +18,12 @@ import type { ReactNode } from "react";
 
 import catBox from "~/images/victoria-alexandrova-My4pywVClEk-unsplash.jpg";
 import Button from "~/components/Button";
+import { ADOBE_FONTS_URL } from "~/constants/urls";
 
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
+    { rel: "preload", href: ADOBE_FONTS_URL, as: "style" },
     { rel: "icon", href: "/favicon.ico" },
   ];
 };
@@ -30,21 +32,16 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/wuf0dhh.css"
-          type="text/css"
-        />
+        <Meta />
+        <Links />
+
+        {/* Fixed link, meta values not managed by Remix */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#0e1c38" />
-        <Meta />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@theleoji" />
         <meta name="twitter:creator" content="@theleoji" />
-        <Links />
-
-        {/* Fixed links not managed by Remix */}
 
         <link
           rel="apple-touch-icon"
