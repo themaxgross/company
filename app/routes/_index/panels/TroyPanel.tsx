@@ -31,7 +31,7 @@ export default function TroyPanel() {
           />
         </div>
         <div className="w-full lg:w-1/3 flex flex-col justify-center items-center py-5 px-8 md:px-12 dark:text-brand-primary text-brand-white">
-          <h3 className="text-xl md:text-3xl font-semibold tracking-loose mb-3 md:mb-5 font-raleway">
+          <h3 className="text-xl md:text-3xl font-semibold tracking-loose mb-3 md:mb-5 font-futura">
             Meet Troy, the cat
           </h3>
           <p className="text-md md:text-xl mb-2 md:mb-4">
