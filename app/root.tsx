@@ -80,6 +80,9 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#0e1c38" />
         <Meta />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@theleoji" />
+        <meta name="twitter:creator" content="@theleoji" />
         <Links />
 
         {/* Fixed links not managed by Remix */}

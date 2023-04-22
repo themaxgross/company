@@ -16,21 +16,17 @@ export const meta: V2_MetaFunction = () => {
         "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
     },
     {
-      name: "og:title",
+      property: "og:title",
       content: "Leo Ji, a paw-some boutique web developer and designer",
     },
     {
-      name: "og:description",
+      property: "og:description",
       content:
         "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
     },
     {
-      name: "og:image",
-      content: `//leoji.company${socialShareDefaultImage}`,
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
+      property: "og:image",
+      content: `https://leoji.company/${socialShareDefaultImage}`,
     },
   ];
 };
