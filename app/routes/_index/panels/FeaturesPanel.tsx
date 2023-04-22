@@ -22,7 +22,7 @@ const features = [
     icon: HiArchiveBox,
   },
   {
-    name: "Stale food? Nah.",
+    name: "Fresh fish, not stale kibble.",
     description:
       "Tech is like cat food. It's great when it's fresh, but it can get stale fast. If you have legacy systems, I'll work with you to take the best parts and leave the rest behind.",
     icon: HiClock,
