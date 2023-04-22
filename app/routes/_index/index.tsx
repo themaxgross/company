@@ -10,16 +10,8 @@ import FeaturesPanel from "./panels/FeaturesPanel";
 import ContactPanel from "./panels/ContactPanel";
 import FooterPanel from "./panels/FooterPanel";
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: "Leo Ji LLC" },
-    {
-      name: "description",
-      content:
-        "Building blazing fast websites and beautiful designs for the web, one cat at a time.",
-    },
-  ];
-};
+/* HeadlinePanel handles meta as well, since it's the landing screen */
+export { meta } from "./panels/HeadlinePanel";
 
 function SpacerPanel() {
   return <Panel className="pb-2 md:pb-8" />;

@@ -2,6 +2,36 @@ import { Fade } from "react-awesome-reveal";
 import logo from "~/images/logos/lj.svg";
 import React from "react";
 import Panel from "~/components/Panel";
+import type { V2_MetaFunction } from "@remix-run/react";
+
+import socialShareDefaultImage from "~/images/logos/social-share-default.png";
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      title:
+        "Leo Ji LLC, a paw-some boutique web design and development studio",
+    },
+    {
+      name: "description",
+      content:
+        "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
+    },
+    {
+      name: "og:title",
+      content:
+        "Leo Ji LLC, a paw-some boutique web design and development studio",
+    },
+    {
+      name: "og:description",
+      content:
+        "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
+    },
+    {
+      name: "og:image",
+      content: socialShareDefaultImage,
+    },
+  ];
+};
 
 export const HeadlinePanel = () => {
   return (
@@ -17,8 +47,8 @@ export const HeadlinePanel = () => {
                 Designs that are beyond purr-fect.
               </h1>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                From a full-stack web developer and designer with a paw-to-tail
-                brand like no other.
+                From a full-stack web developer and designer offering a
+                paw-to-tail boutique service like no other.
               </h2>
               <div className="relative">
                 <img
