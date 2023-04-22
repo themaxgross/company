@@ -37,7 +37,7 @@ export const HeadlinePanel = () => {
       <div className="w-full min-h-screen flex flex-row items-stretch justify-stretch">
         <div className="py-12 px-8 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div className="text-center sm:text-left">
-            <Fade cascade={true} triggerOnce={true} duration={1500}>
+            <Fade cascade={true} triggerOnce={true} duration={1750}>
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
                 Websites that load faster than zoomies.
               </h1>
@@ -45,8 +45,10 @@ export const HeadlinePanel = () => {
                 Designs that are beyond purr-fect.
               </h1>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                All delivered by a full-stack web developer and designer with a
-                paw-to-tail boutique service offering like no other.
+                Delivered by a full-stack web developer and designer.
+              </h2>
+              <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
+                With a paw-to-tail boutique service offering like no other.
               </h2>
               <div className="relative">
                 <img
