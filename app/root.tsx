@@ -20,9 +20,12 @@ import catBox from "~/images/victoria-alexandrova-My4pywVClEk-unsplash.jpg";
 import Button from "~/components/Button";
 import { ADOBE_FONTS_URL } from "~/constants/urls";
 
+import remixImageStyles from "remix-image/remix-image.css";
+
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
+    { rel: "stylesheet", href: remixImageStyles },
     { rel: "preload", href: ADOBE_FONTS_URL, as: "style" },
     { rel: "icon", href: "/favicon.ico" },
   ];

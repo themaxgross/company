@@ -1,9 +1,13 @@
-import cat from "~/images/_TLJ3167.jpg";
 import React from "react";
-import Panel from "~/components/Panel";
-import { Link, useLocation, useSearchParams } from "@remix-run/react";
+import { Link } from "@remix-run/react";
+
 import Button from "~/components/Button";
+import Image from "~/components/Image";
+import Panel from "~/components/Panel";
+
 import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
+
+import cat from "~/images/_TLJ3167.jpg";
 
 export default function TroyPanel() {
   const debugMode = useSearchDebugParam();
@@ -12,10 +16,27 @@ export default function TroyPanel() {
     <Panel inverted={true}>
       <div className="flex flex-col lg:flex-row w-full justify-center items-center py-3 md:py-10 px-3 md:px-8">
         <div className="w-full lg:w-2/3 flex flex-col justify-stretch items-stretch">
-          <img
+          <Image
             src={cat}
             alt="Troy the cat"
             className="w-full h-auto border-8 dark:border-brand-primary border-brand-white rounded"
+            responsive={[
+              {
+                size: { width: 100 },
+              },
+              {
+                size: { width: 300 },
+              },
+              {
+                size: { width: 600 },
+              },
+              {
+                size: { width: 900 },
+              },
+              {
+                size: { width: 1200 },
+              },
+            ]}
           />
         </div>
         <div className="w-full lg:w-1/3 flex flex-col justify-center items-center py-5 px-8 md:px-12 dark:text-brand-primary text-brand-white">
