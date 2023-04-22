@@ -27,7 +27,7 @@ export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
     { rel: "stylesheet", href: remixImageStyles },
-    { rel: "preload", href: ADOBE_FONTS_URL, as: "style" },
+    { rel: "stylesheet", href: ADOBE_FONTS_URL },
     { rel: "icon", href: "/favicon.ico" },
   ];
 };
