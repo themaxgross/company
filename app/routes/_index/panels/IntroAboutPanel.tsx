@@ -20,18 +20,11 @@ export default function IntroAboutPanel() {
               and delivering delightful designs for the web, one cat at a time.
             </p>
             <p className="text-md md:text-xl mb-2 md:mb-4">
-              Cats not included with most projects.
-            </p>
-            <p className="text-md md:text-xl mb-2 md:mb-4">
-              I'm currently available for hire. If you're interested in working
-              together, please{" "}
-              <a
-                href="mailto:hello@leoji.company"
-                className="text-brand-primary-800 hover:text-brand-primary-500 dark:text-brand-primary-200 dark:hover:text-brand-primary-500"
-              >
-                email me
-              </a>
-              .
+              I offer boutique web development and design services for
+              individuals and small businesses, with deep experience in{" "}
+              <strong>React</strong>, <strong>Next.js</strong>,{" "}
+              <strong>Remix</strong>, <strong>Shopify</strong>,{" "}
+              <strong>WordPress</strong>, and <strong>WooCommerce</strong>.
             </p>
           </div>
         </div>

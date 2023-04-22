@@ -16,6 +16,10 @@ export const HeadlinePanel = () => {
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
                 Designs that are beyond purr-fect.
               </h1>
+              <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
+                From a full-stack web developer and designer with a paw-to-tail
+                brand like no other.
+              </h2>
               <div className="relative">
                 <img
                   src={logo}
