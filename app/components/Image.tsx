@@ -8,7 +8,12 @@ type ImageProps = RemixImageProps & {
 // hardcode the domain for now
 const domain = "https://leoji.company";
 
-export default function Image({ responsive, src, ...props }: ImageProps) {
+export default function Image({
+  responsive,
+  src,
+  options,
+  ...props
+}: ImageProps) {
   const isDev = process.env.NODE_ENV === "development";
   const useCloudflare = !isDev;
 
@@ -22,6 +27,10 @@ export default function Image({ responsive, src, ...props }: ImageProps) {
     <RemixImage
       {...props}
       src={src}
+      options={{
+        ...options,
+        background: undefined,
+      }}
       loader={cloudflareImagesLoader}
       responsive={useCloudflare ? responsive : undefined}
     />
