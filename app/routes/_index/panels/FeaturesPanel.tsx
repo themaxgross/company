@@ -38,7 +38,7 @@ const features = [
 export default function FeaturesPanel() {
   return (
     <Panel>
-      <div className="flex flex-col lg:flex-row w-full justify-center items-center py-3 md:py-10 px-3 md:px-8">
+      <div className="flex flex-col lg:flex-row w-full justify-center items-center py-3 md:pt-10 md:py-5 px-3 md:px-8">
         <div className="w-full lg:w-2/3 flex flex-col justify-stretch items-stretch">
           <div className=" py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
