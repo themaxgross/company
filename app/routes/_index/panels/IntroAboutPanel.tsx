@@ -20,7 +20,7 @@ export default function IntroAboutPanel() {
               and delivering delightful designs for the web, one cat at a time.
             </p>
             <p className="text-md md:text-xl mb-2 md:mb-4">
-              I offer boutique web development and design services for
+              I offer boutique web development, design and hosting services for
               individuals and small businesses, with deep experience in{" "}
               <strong>React</strong>, <strong>Next.js</strong>,{" "}
               <strong>Remix</strong>, <strong>WordPress</strong>, and{" "}
