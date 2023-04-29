@@ -34,7 +34,7 @@ export const meta: V2_MetaFunction = () => {
 export const HeadlinePanel = () => {
   return (
     <Panel className="flex flex-row justify-stretch items-stretch">
-      <div className="w-full min-h-screen flex flex-row items-stretch justify-stretch">
+      <div className="w-full min-h-screen h-fit flex flex-row items-stretch justify-stretch">
         <div className="py-12 px-8 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div className="text-center sm:text-left">
             <Fade cascade={true} triggerOnce={true} duration={1750}>
@@ -50,7 +50,7 @@ export const HeadlinePanel = () => {
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
                 With a paw-to-tail boutique service offering like no other.
               </h2>
-              <div className="relative">
+              <div className="relative h-32">
                 <img
                   src={logo}
                   alt=""
