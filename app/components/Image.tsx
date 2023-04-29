@@ -19,7 +19,7 @@ export default function Image({
   const isHydrated = useHydrated();
 
   const isDev = process.env.NODE_ENV === "development";
-  const useCloudflare = !isDev;
+  const useCloudflare = !isDev && false; // force false; disable cloudflare images for now
 
   // If src does not start with a domain, then it is a local image
   // and we need to add the domain to the src
