@@ -14,16 +14,16 @@ export default function PricingPage() {
       <div className="bg-gray-200 dark:bg-gray-700">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="bg-white dark:bg-brand-primary py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32">
               <div className="mx-auto max-w-4xl text-center">
                 <h2 className="text-base font-semibold leading-7 text-brand-primary dark:text-brand-white">
-                  Pricing
+                  Pricing Purr-fection
                 </h2>
                 <p
                   className="mt-2 text-4xl font-semibold font-raleway tracking-tight text-gray-900 sm:text-5xl
                 dark:text-brand-white"
                 >
-                  Plans for businesses of all sizes
+                  Simple, transparent pricing
                 </p>
               </div>
               <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
@@ -65,6 +65,9 @@ export default function PricingPage() {
                     >
                       {sections.map((section) => (
                         <li key={section.name}>
+                          <h4 className="font-medium text-lg leading-5 text-gray-900 dark:text-brand-white font-futura mt-8 mb-3 text-center">
+                            {section.name}
+                          </h4>
                           <ul role="list" className="space-y-4">
                             {section.features.map((feature) =>
                               feature.tiers[tier.id] ? (
@@ -177,7 +180,7 @@ export default function PricingPage() {
                                 className="py-4 text-sm font-normal leading-6 text-gray-900 dark:text-brand-white"
                               >
                                 {feature.name}
-                                <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5" />
+                                <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5 dark:bg-brand-white/20" />
                               </th>
                               {tiers.map((tier) => (
                                 <td key={tier.id} className="px-6 py-4 xl:px-8">
@@ -190,12 +193,12 @@ export default function PricingPage() {
                                     <>
                                       {feature.tiers[tier.id] === true ? (
                                         <HiCheckCircle
-                                          className="mx-auto h-5 w-5 text-brand-primary dark:text-brand-primary-200"
+                                          className="mx-auto h-5 w-5 text-brand-primary dark:text-brand-primary-50"
                                           aria-hidden="true"
                                         />
                                       ) : (
                                         <HiMinusCircle
-                                          className="mx-auto h-5 w-5 text-gray-400 dark:text-brand-primary-300"
+                                          className="mx-auto h-5 w-5 text-gray-400 dark:text-brand-primary-600"
                                           aria-hidden="true"
                                         />
                                       )}
