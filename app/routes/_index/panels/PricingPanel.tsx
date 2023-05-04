@@ -34,7 +34,8 @@ const tiers: Tier[] = [
     id: "economy-plus",
     href: "#contact",
     priceMonthly: "$99",
-    description: "High-touch services for a professional web presence.",
+    description:
+      "High-touch services for a professional web presence, designed to ensure your business looks great.",
     features: [
       "Everything in Economy Basic",
       "Photo services (1 session)",
@@ -107,36 +108,38 @@ export default function PricingPanel() {
                 <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-slate-200">
                   {tier.description}
                 </p>
-                <p className="mt-6 flex items-baseline gap-x-1">
-                  {tier.priceMonthly ? (
-                    <>
-                      <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-brand-white">
-                        {tier.priceMonthly}
+                <div className="flex items-baseline justify-end flex-col">
+                  <p className="mt-6 flex items-baseline gap-x-1">
+                    {tier.priceMonthly ? (
+                      <>
+                        <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-brand-white">
+                          {tier.priceMonthly}
+                        </span>
+                        <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-brand-white">
+                          /month
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-slate-200">
+                        Contact for pricing
                       </span>
-                      <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-brand-white">
-                        /month
-                      </span>
-                    </>
-                  ) : (
-                    <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-slate-200">
-                      Contact for pricing
-                    </span>
-                  )}
-                </p>
-                <ul
-                  role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-slate-200"
-                >
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex gap-x-3">
-                      <HiCheckCircle
-                        className="h-6 w-5 flex-none text-brand-primary dark:text-brand-primary-200"
-                        aria-hidden="true"
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                    )}
+                  </p>
+                  <ul
+                    role="list"
+                    className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-slate-200"
+                  >
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex gap-x-3">
+                        <HiCheckCircle
+                          className="h-6 w-5 flex-none text-brand-primary dark:text-brand-primary-200"
+                          aria-hidden="true"
+                        />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
               <a
                 href={tier.href}
