@@ -5,57 +5,61 @@ import { HiCheckCircle } from "react-icons/hi2";
 import clsx from "clsx";
 import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
 
-const tiers = [
+interface Tier {
+  name: string;
+  id: string;
+  href: string;
+  priceMonthly?: string;
+  description: string;
+  features: string[];
+  recommendedOption?: boolean;
+}
+
+const tiers: Tier[] = [
   {
-    name: "Freelancer",
-    id: "tier-freelancer",
+    name: "Economy Basic",
+    id: "economy-basic",
     href: "#",
-    priceMonthly: "$24",
-    description: "The essentials to provide your best work for clients.",
+    priceMonthly: "$69",
+    description: "The basics to get your business up and running on the web.",
     features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
+      "WordPress site with custom domain, SSL, and CDN",
+      "Custom plugins and themes supported",
+      "Target audience and content consultation",
     ],
-    mostPopular: false,
+    recommendedOption: false,
   },
   {
-    name: "Startup",
-    id: "tier-startup",
+    name: "Economy Plus",
+    id: "economy-plus",
     href: "#",
-    priceMonthly: "$32",
-    description: "A plan that scales with your rapidly growing business.",
+    priceMonthly: "$99",
+    description: "High-touch services for a professional web presence.",
     features: [
-      "25 products",
-      "Up to 10,000 subscribers",
-      "Advanced analytics",
-      "24-hour support response time",
-      "Marketing automations",
+      "Everything in Economy Basic",
+      "Photo services (1 session)",
+      "Content copywriting for static pages",
     ],
-    mostPopular: true,
+    recommendedOption: true,
   },
   {
-    name: "Enterprise",
-    id: "tier-enterprise",
+    name: "Business Pro",
+    id: "business-pro",
     href: "#",
-    priceMonthly: "$48",
-    description: "Dedicated support and infrastructure for your company.",
+    description: "Dedicated support for the most demanding use cases.",
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "1-hour, dedicated support response time",
-      "Marketing automations",
+      "SLA uptime guarantee",
+      "Custom development",
+      "Unlimited photo and content services",
     ],
-    mostPopular: false,
+    recommendedOption: false,
   },
 ];
 
 export default function PricingPanel() {
   const debug = useSearchDebugParam();
 
-  if (!debug) return null;
+  // if (!debug) return null;
 
   return (
     <Panel>
@@ -68,50 +72,70 @@ export default function PricingPanel() {
             <div
               key={tier.id}
               className={clsx(
-                tier.mostPopular ? "lg:z-10 lg:rounded-b-none" : "lg:mt-8",
+                tier.recommendedOption
+                  ? "lg:z-10 lg:rounded-b-none"
+                  : "lg:mt-8",
                 tierIdx === 0 ? "lg:rounded-r-none" : "",
                 tierIdx === tiers.length - 1 ? "lg:rounded-l-none" : "",
-                "flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10"
+                "flex flex-col justify-between rounded-3xl",
+                "bg-white dark:bg-slate-900",
+                "ring-1 ring-gray-200",
+                "p-8 xl:p-10"
               )}
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">
                   <h3
-                    id={tier.id}
+                    id={`id-${tier.id}`}
                     className={clsx(
-                      tier.mostPopular
-                        ? "text-brand-primary-600"
-                        : "text-gray-900",
+                      tier.recommendedOption
+                        ? "text-brand-primary-600 dark:text-brand-primary-50"
+                        : "text-gray-900 dark:text-brand-primary-100",
                       "text-lg font-semibold leading-8"
                     )}
                   >
                     {tier.name}
                   </h3>
-                  {tier.mostPopular ? (
-                    <p className="rounded-full bg-brand-primary-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-brand-primary-600">
-                      Most popular
+                  {tier.recommendedOption ? (
+                    <p
+                      className="rounded-full
+                      bg-brand-primary-600/10
+                      dark:bg-brand-primary-400/60
+
+                      px-2.5 py-1 text-xs font-semibold
+                    leading-5 text-brand-primary-600 dark:text-brand-primary-100"
+                    >
+                      Recommended
                     </p>
                   ) : null}
                 </div>
-                <p className="mt-4 text-sm leading-6 text-gray-600">
+                <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-slate-200">
                   {tier.description}
                 </p>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-gray-900">
-                    {tier.priceMonthly}
-                  </span>
-                  <span className="text-sm font-semibold leading-6 text-gray-600">
-                    /month
-                  </span>
+                  {tier.priceMonthly ? (
+                    <>
+                      <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-brand-white">
+                        {tier.priceMonthly}
+                      </span>
+                      <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-brand-white">
+                        /month
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-slate-200">
+                      Contact for pricing
+                    </span>
+                  )}
                 </p>
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-slate-200"
                 >
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
                       <HiCheckCircle
-                        className="h-6 w-5 flex-none text-brand-primary-600"
+                        className="h-6 w-5 flex-none text-brand-primary-600 dark:text-brand-primary-400"
                         aria-hidden="true"
                       />
                       {feature}
@@ -123,13 +147,13 @@ export default function PricingPanel() {
                 href={tier.href}
                 aria-describedby={tier.id}
                 className={clsx(
-                  tier.mostPopular
-                    ? "bg-brand-primary-600 text-white shadow-sm hover:bg-indigo-500"
-                    : "text-brand-primary-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300",
+                  tier.recommendedOption
+                    ? "bg-brand-primary-600 dark:bg-brand-primary-300 text-white dark:text-brand-primary shadow-sm hover:bg-indigo-500"
+                    : "text-brand-primary-600 dark:text-brand-primary-300 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300",
                   "mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary-600"
                 )}
               >
-                Buy plan
+                Get started
               </a>
             </div>
           ))}
