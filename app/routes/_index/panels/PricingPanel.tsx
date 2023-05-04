@@ -6,13 +6,14 @@ import clsx from "clsx";
 import { tiers } from "~/models/pricing/tiers";
 import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
+import { Link } from "@remix-run/react";
 
 export default function PricingPanel() {
   return (
     <Panel>
       <div className="max-w-2xl md:max-w-4xl xl:max-w-6xl mx-auto">
         <div
-          className="isolate mb-32 grid max-w-md grid-cols-1 gap-y-8
+          className="isolate grid max-w-md grid-cols-1 gap-y-8
                      lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
           {tiers.map((tier, tierIdx) => (
@@ -83,6 +84,16 @@ export default function PricingPanel() {
               />
             </div>
           ))}
+        </div>
+        <div className="mt-4 md:mt-8 mb-10 md:mb-32 text-center">
+          <Link
+            to="/pricing"
+            className="
+            text-sm
+            font-medium underline hover:no-underline text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200"
+          >
+            View detailed pricing
+          </Link>
         </div>
       </div>
     </Panel>

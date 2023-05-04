@@ -70,6 +70,22 @@ const WebsiteSection: PricingTableSection = {
       },
     },
     {
+      name: "No-worry limits on storage",
+      tiers: {
+        basic: true,
+        plus: true,
+        pro: true,
+      },
+    },
+    {
+      name: "No-worry limits on traffic",
+      tiers: {
+        basic: true,
+        plus: true,
+        pro: true,
+      },
+    },
+    {
       name: "Uptime guarantee",
       tiers: {
         basic: false,
@@ -100,10 +116,18 @@ const BusinessServicesSection: PricingTableSection = {
       },
     },
     {
-      name: "Content copywriting for static pages",
+      name: "Copy editing for standard web pages",
       tiers: {
         basic: false,
         plus: true,
+        pro: true,
+      },
+    },
+    {
+      name: "Content copywriting for standard web pages",
+      tiers: {
+        basic: false,
+        plus: false,
         pro: true,
       },
     },
@@ -142,6 +166,14 @@ const PhotoSection: PricingTableSection = {
       tiers: {
         basic: false,
         plus: true,
+        pro: true,
+      },
+    },
+    {
+      name: "Access to stock photography",
+      tiers: {
+        basic: false,
+        plus: false,
         pro: true,
       },
     },

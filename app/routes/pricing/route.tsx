@@ -11,24 +11,27 @@ import { PricingContactButton } from "~/components/pricing/ContactButton";
 export default function PricingPage() {
   return (
     <div className="min-h-screen min-w-screen bg-brand-primary p-2 md:p-5">
-      <div className="bg-gray-200">
+      <div className="bg-gray-200 dark:bg-gray-700">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="bg-white py-24 sm:py-32">
+          <div className="bg-white dark:bg-brand-primary py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-base font-semibold leading-7 text-brand-primary">
+                <h2 className="text-base font-semibold leading-7 text-brand-primary dark:text-brand-white">
                   Pricing
                 </h2>
-                <p className="mt-2 text-4xl font-semibold font-raleway tracking-tight text-gray-900 sm:text-5xl">
+                <p
+                  className="mt-2 text-4xl font-semibold font-raleway tracking-tight text-gray-900 sm:text-5xl
+                dark:text-brand-white"
+                >
                   Plans for businesses of all sizes
                 </p>
               </div>
-              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
                 Choose an affordable plan that's packed with the best features
                 for engaging your audience, creating customer loyalty, and
                 driving sales.
               </p>
-              <p className="mx-auto mt-2 max-w-2xl text-center text-lg leading-8 text-gray-600">
+              <p className="mx-auto mt-2 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
                 Cat approval not included.
               </p>
 
@@ -39,14 +42,14 @@ export default function PricingPage() {
                     key={tier.id}
                     className={clsx(
                       tier.recommendedOption
-                        ? "rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200"
+                        ? "rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
                         : "",
                       "p-8"
                     )}
                   >
                     <h3
                       id={tier.id}
-                      className="text-sm font-semibold leading-6 text-gray-900"
+                      className="text-sm font-semibold leading-6 text-gray-900 dark:text-brand-white"
                     >
                       {tier.name}
                     </h3>
@@ -58,7 +61,7 @@ export default function PricingPage() {
                     />
                     <ul
                       role="list"
-                      className="mt-10 space-y-4 text-sm leading-6 text-gray-900"
+                      className="mt-10 space-y-4 text-sm leading-6 text-gray-900 dark:text-brand-white"
                     >
                       {sections.map((section) => (
                         <li key={section.name}>
@@ -67,14 +70,14 @@ export default function PricingPage() {
                               feature.tiers[tier.id] ? (
                                 <li key={feature.name} className="flex gap-x-3">
                                   <HiCheckCircle
-                                    className="h-6 w-5 flex-none text-brand-primary"
+                                    className="h-6 w-5 flex-none text-brand-primary dark:text-brand-white"
                                     aria-hidden="true"
                                   />
                                   <span>
                                     {feature.name}{" "}
                                     {typeof feature.tiers[tier.id] ===
                                     "string" ? (
-                                      <span className="text-sm leading-6 text-gray-500">
+                                      <span className="text-sm leading-6 text-gray-500 dark:text-gray-400">
                                         ({feature.tiers[tier.id]})
                                       </span>
                                     ) : null}
@@ -129,7 +132,7 @@ export default function PricingPage() {
                             scope="col"
                             className="px-6 pt-6 xl:px-8 xl:pt-8"
                           >
-                            <div className="text-sm font-semibold leading-7 text-gray-900">
+                            <div className="text-sm font-semibold leading-7 text-gray-900 dark:text-brand-white">
                               {tier.name}
                             </div>
                           </th>
@@ -160,7 +163,7 @@ export default function PricingPage() {
                               colSpan={4}
                               className={clsx(
                                 sectionIdx === 0 ? "pt-8" : "pt-16",
-                                "pb-4 text-sm font-semibold leading-6 text-gray-900"
+                                "pb-4 text-lg font-semibold font-futura leading-6 text-gray-900 dark:text-brand-primary-100"
                               )}
                             >
                               {section.name}
@@ -171,7 +174,7 @@ export default function PricingPage() {
                             <tr key={feature.name}>
                               <th
                                 scope="row"
-                                className="py-4 text-sm font-normal leading-6 text-gray-900"
+                                className="py-4 text-sm font-normal leading-6 text-gray-900 dark:text-brand-white"
                               >
                                 {feature.name}
                                 <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5" />
@@ -180,19 +183,19 @@ export default function PricingPage() {
                                 <td key={tier.id} className="px-6 py-4 xl:px-8">
                                   {typeof feature.tiers[tier.id] ===
                                   "string" ? (
-                                    <div className="text-center text-sm leading-6 text-gray-500">
+                                    <div className="text-center text-sm leading-6 text-gray-500 dark:text-gray-400">
                                       {feature.tiers[tier.id]}
                                     </div>
                                   ) : (
                                     <>
                                       {feature.tiers[tier.id] === true ? (
                                         <HiCheckCircle
-                                          className="mx-auto h-5 w-5 text-brand-primary"
+                                          className="mx-auto h-5 w-5 text-brand-primary dark:text-brand-primary-200"
                                           aria-hidden="true"
                                         />
                                       ) : (
                                         <HiMinusCircle
-                                          className="mx-auto h-5 w-5 text-gray-400"
+                                          className="mx-auto h-5 w-5 text-gray-400 dark:text-brand-primary-300"
                                           aria-hidden="true"
                                         />
                                       )}
