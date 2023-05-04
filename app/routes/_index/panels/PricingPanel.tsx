@@ -19,7 +19,7 @@ const tiers: Tier[] = [
   {
     name: "Economy Basic",
     id: "economy-basic",
-    href: "#",
+    href: "#contact",
     priceMonthly: "$69",
     description: "The basics to get your business up and running on the web.",
     features: [
@@ -32,7 +32,7 @@ const tiers: Tier[] = [
   {
     name: "Economy Plus",
     id: "economy-plus",
-    href: "#",
+    href: "#contact",
     priceMonthly: "$99",
     description: "High-touch services for a professional web presence.",
     features: [
@@ -45,7 +45,7 @@ const tiers: Tier[] = [
   {
     name: "Business Pro",
     id: "business-pro",
-    href: "#",
+    href: "#contact",
     description: "Dedicated support for the most demanding use cases.",
     features: [
       "SLA uptime guarantee",

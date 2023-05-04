@@ -130,7 +130,17 @@ export default function ContactPanel() {
   const debug = useSearchDebugParam();
 
   if (debug) {
-    return <ContactFormPanel />;
+    return (
+      <>
+        <a id="contact" />
+        <ContactFormPanel />
+      </>
+    );
   }
-  return <ContactFormlessPanel />;
+  return (
+    <>
+      <a id="contact" />
+      <ContactFormlessPanel />
+    </>
+  );
 }
