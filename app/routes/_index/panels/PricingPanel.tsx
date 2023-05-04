@@ -3,59 +3,9 @@ import Panel from "~/components/Panel";
 import { HiCheckCircle } from "react-icons/hi2";
 
 import clsx from "clsx";
-import { useSearchDebugParam } from "~/hooks/useSearchDebugParam";
-
-interface Tier {
-  name: string;
-  id: string;
-  href: string;
-  priceMonthly?: string;
-  description: string;
-  features: string[];
-  recommendedOption?: boolean;
-}
-
-const tiers: Tier[] = [
-  {
-    name: "Economy Basic",
-    id: "economy-basic",
-    href: "#contact",
-    priceMonthly: "$69",
-    description: "The basics to get your business up and running on the web.",
-    features: [
-      "WordPress site with custom domain, SSL, and CDN",
-      "Custom plugins and themes supported",
-      "Target audience and content consultation",
-    ],
-    recommendedOption: false,
-  },
-  {
-    name: "Economy Plus",
-    id: "economy-plus",
-    href: "#contact",
-    priceMonthly: "$99",
-    description:
-      "High-touch services for a professional web presence, designed to ensure your business looks great.",
-    features: [
-      "Everything in Economy Basic",
-      "Photo services (1 session)",
-      "Content copywriting for static pages",
-    ],
-    recommendedOption: true,
-  },
-  {
-    name: "Business Pro",
-    id: "business-pro",
-    href: "#contact",
-    description: "Dedicated support for the most demanding use cases.",
-    features: [
-      "SLA uptime guarantee",
-      "Custom development",
-      "Unlimited photo and content services",
-    ],
-    recommendedOption: false,
-  },
-];
+import { tiers } from "~/models/pricing/tiers";
+import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
+import { PricingContactButton } from "~/components/pricing/ContactButton";
 
 export default function PricingPanel() {
   return (
@@ -67,7 +17,7 @@ export default function PricingPanel() {
         >
           {tiers.map((tier, tierIdx) => (
             <div
-              key={tier.id}
+              key={tier.name}
               className={clsx(
                 tier.recommendedOption
                   ? "lg:z-10 lg:rounded-b-none"
@@ -83,7 +33,7 @@ export default function PricingPanel() {
               <div>
                 <div className="flex items-center justify-between gap-x-4">
                   <h3
-                    id={`id-${tier.id}`}
+                    id={`id-${tier.name}`}
                     className={clsx(
                       tier.recommendedOption
                         ? "text-brand-primary-600 dark:text-brand-white"
@@ -109,22 +59,7 @@ export default function PricingPanel() {
                   {tier.description}
                 </p>
                 <div className="flex items-baseline justify-end flex-col">
-                  <p className="mt-6 flex items-baseline gap-x-1">
-                    {tier.priceMonthly ? (
-                      <>
-                        <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-brand-white">
-                          {tier.priceMonthly}
-                        </span>
-                        <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-brand-white">
-                          /month
-                        </span>
-                      </>
-                    ) : (
-                      <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-slate-200">
-                        Contact for pricing
-                      </span>
-                    )}
-                  </p>
+                  <MonthlyPricing priceMonthly={tier.priceMonthly} />
                   <ul
                     role="list"
                     className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-slate-200"
@@ -141,20 +76,11 @@ export default function PricingPanel() {
                   </ul>
                 </div>
               </div>
-              <a
+              <PricingContactButton
+                name={tier.name}
                 href={tier.href}
-                aria-describedby={tier.id}
-                className={clsx(
-                  tier.recommendedOption
-                    ? "bg-brand-primary dark:bg-brand-white text-brand-white dark:text-brand-primary shadow-sm hover:bg-brand-primary-700 dark:hover:bg-brand-primary-100"
-                    : "text-brand-primary-600 dark:text-brand-white dark:bg-brand-primary-200 hover:bg-brand-primary-50 dark:hover:bg-brand-primary-300",
-                  "ring-1 ring-inset ring-brand-primary-500 dark:ring-brand-primary-400",
-                  "mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 ",
-                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary-600"
-                )}
-              >
-                Get started
-              </a>
+                recommended={tier.recommendedOption}
+              />
             </div>
           ))}
         </div>
