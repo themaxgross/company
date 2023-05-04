@@ -33,7 +33,7 @@ export function ContactFormlessPanel() {
           Paw me at{" "}
           <a
             href="mailto:hello@leoji.company"
-            className="text-brand-primary dark:text-brand-primary-300 hover:text-brand-primary-600 dark:hover:text-brand-primary-400"
+            className="text-brand-primary dark:text-brand-primary-200 hover:text-brand-primary-600 dark:hover:text-brand-primary-100"
           >
             hello@leoji.company
           </a>

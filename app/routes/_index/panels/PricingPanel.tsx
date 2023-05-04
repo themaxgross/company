@@ -89,8 +89,8 @@ export default function PricingPanel() {
                     id={`id-${tier.id}`}
                     className={clsx(
                       tier.recommendedOption
-                        ? "text-brand-primary-600 dark:text-brand-primary-50"
-                        : "text-gray-900 dark:text-brand-primary-100",
+                        ? "text-brand-primary-600 dark:text-brand-white"
+                        : "text-gray-900 dark:text-gray-300",
                       "text-lg font-semibold leading-8"
                     )}
                   >
@@ -101,9 +101,8 @@ export default function PricingPanel() {
                       className="rounded-full
                       bg-brand-primary-600/10
                       dark:bg-brand-primary-400/60
-
                       px-2.5 py-1 text-xs font-semibold
-                    leading-5 text-brand-primary-600 dark:text-brand-primary-100"
+                      leading-5 text-brand-primary-600 dark:text-brand-primary-100"
                     >
                       Recommended
                     </p>
@@ -135,7 +134,7 @@ export default function PricingPanel() {
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
                       <HiCheckCircle
-                        className="h-6 w-5 flex-none text-brand-primary-600 dark:text-brand-primary-400"
+                        className="h-6 w-5 flex-none text-brand-primary dark:text-brand-primary-200"
                         aria-hidden="true"
                       />
                       {feature}
@@ -148,9 +147,11 @@ export default function PricingPanel() {
                 aria-describedby={tier.id}
                 className={clsx(
                   tier.recommendedOption
-                    ? "bg-brand-primary-600 dark:bg-brand-primary-300 text-white dark:text-brand-primary shadow-sm hover:bg-indigo-500"
-                    : "text-brand-primary-600 dark:text-brand-primary-300 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300",
-                  "mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary-600"
+                    ? "bg-brand-primary dark:bg-brand-white text-brand-white dark:text-brand-primary shadow-sm hover:bg-brand-primary-700 dark:hover:bg-brand-primary-100"
+                    : "text-brand-primary-600 dark:text-brand-white dark:bg-brand-primary-200 hover:bg-brand-primary-50 dark:hover:bg-brand-primary-300",
+                  "ring-1 ring-inset ring-brand-primary-500 dark:ring-brand-primary-400",
+                  "mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 ",
+                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary-600"
                 )}
               >
                 Get started

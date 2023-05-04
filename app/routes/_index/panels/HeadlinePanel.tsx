@@ -45,10 +45,11 @@ export const HeadlinePanel = () => {
                 Designs that are beyond purr-fect.
               </h1>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                Delivered by a full-stack web developer and designer.
+                Together with purr-sonalized support and boutique service.
               </h2>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                With a paw-to-tail boutique service offering like no other.
+                Everything you need to get your business online, in front of
+                custo-mew-rs.
               </h2>
               <div className="relative h-32">
                 <img
