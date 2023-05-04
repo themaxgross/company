@@ -1,5 +1,8 @@
 import type { V2_MetaFunction } from "@remix-run/react";
 
+import { Header } from "~/components/pricing/layout/Header";
+import { Footer } from "~/components/pricing/layout/Footer";
+
 import type { TierType } from "~/models/pricing/tiers";
 import { tiers } from "~/models/pricing/tiers";
 
@@ -34,6 +37,8 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen min-w-screen bg-brand-primary p-2 md:p-5">
       <div className="bg-gray-200 dark:bg-gray-700">
+        <Header />
+
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="bg-white dark:bg-brand-primary py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32">
@@ -60,6 +65,8 @@ export default function PricingPage() {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     </div>
   );
