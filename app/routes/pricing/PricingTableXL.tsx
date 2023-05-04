@@ -100,12 +100,12 @@ export default function PricingTableXL({ tiers }: { tiers: TierType[] }) {
                           <>
                             {feature.tiers[tier.id] === true ? (
                               <HiCheckCircle
-                                className="mx-auto h-5 w-5 text-brand-primary dark:text-brand-primary-50"
+                                className="mx-auto h-6 w-6 text-brand-primary dark:text-brand-primary-50"
                                 aria-hidden="true"
                               />
                             ) : (
                               <HiMinusCircle
-                                className="mx-auto h-5 w-5 text-gray-400 dark:text-brand-primary-600"
+                                className="mx-auto h-6 w-6 text-gray-400 dark:text-brand-primary-300"
                                 aria-hidden="true"
                               />
                             )}

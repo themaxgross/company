@@ -36,11 +36,11 @@ const PricingTable = ({ tiers }: { tiers: TierType[] }) => {
 export default function PricingPage() {
   return (
     <div className="min-h-screen min-w-screen bg-brand-primary p-2 md:p-5">
-      <div className="bg-gray-200 dark:bg-gray-700">
+      <div className="bg-gray-200 dark:bg-brand-primary-600">
         <Header />
 
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-brand-primary py-24 sm:py-32">
+          <div className="bg-white dark:bg-brand-primary-700 py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32">
               <div className="mx-auto max-w-4xl text-center">
                 <h2 className="text-base font-normal leading-7 text-brand-primary dark:text-brand-white font-futura uppercase">

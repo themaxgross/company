@@ -68,7 +68,7 @@ export default function PricingTableSM({ tiers }: { tiers: TierType[] }) {
   return (
     <div className="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
       {tiers.map((tier) => (
-        <TierSection tier={tier} />
+        <TierSection tier={tier} key={tier.id} />
       ))}
     </div>
   );
