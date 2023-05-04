@@ -12,20 +12,8 @@ export default function IntroAboutPanel() {
         <div className="">
           <div>
             <h2 className="text-xl md:text-2xl xl:text-3xl mb-3 md:mb-5 font-semibold tracking-tight">
-              I'm Leo Ji, a web developer and designer based in Chicago.
+              Premium services to bring your business to the web.
             </h2>
-            <p className="text-md md:text-xl mb-2 md:mb-4">
-              Having everything from simple landing pages to complex
-              applications, I am passionate about building blazing fast websites
-              and delivering delightful designs for the web, one cat at a time.
-            </p>
-            <p className="text-md md:text-xl mb-2 md:mb-4">
-              I offer boutique web development, design and hosting services for
-              individuals and small businesses, with deep experience in{" "}
-              <strong>React</strong>, <strong>Next.js</strong>,{" "}
-              <strong>Remix</strong>, <strong>WordPress</strong>, and{" "}
-              <strong>WooCommerce</strong>.
-            </p>
           </div>
         </div>
         <div className="mx-auto max-w-7xl py-12 sm:py-18 lg:flex lg:items-center lg:justify-between">
@@ -36,7 +24,7 @@ export default function IntroAboutPanel() {
             <Link to="mailto:hello@leoji.company">
               <Button className="flex flex-row justify-center items-center">
                 <FaEnvelopeOpenText className="mr-2" />
-                Email me
+                <span>Get in touch</span>
               </Button>
             </Link>
           </div>

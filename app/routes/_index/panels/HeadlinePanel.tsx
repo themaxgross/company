@@ -13,7 +13,7 @@ export const meta: V2_MetaFunction = () => {
     {
       name: "description",
       content:
-        "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
+        "Web developer and designer offering a paw-to-tail boutique service like no other.",
     },
     {
       property: "og:title",
@@ -22,7 +22,7 @@ export const meta: V2_MetaFunction = () => {
     {
       property: "og:description",
       content:
-        "Building websites that load faster than zoomies, and designs that are beyond purr-fect. From a full-stack web developer and designer offering a paw-to-tail boutique service like no other.",
+        "Web developer and designer offering a paw-to-tail boutique service like no other.",
     },
     {
       property: "og:image",
@@ -37,7 +37,7 @@ export const HeadlinePanel = () => {
       <div className="w-full min-h-screen h-fit flex flex-row items-stretch justify-stretch">
         <div className="py-12 px-8 md:px-12 w-full xl:w-1/2 md:mr-auto min-h-24 flex flex-col justify-around">
           <div className="text-center sm:text-left">
-            <Fade cascade={true} triggerOnce={true} duration={1750}>
+            <Fade cascade={true} triggerOnce={true} duration={1500}>
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
                 Websites that load faster than zoomies.
               </h1>
@@ -45,11 +45,8 @@ export const HeadlinePanel = () => {
                 Designs that are beyond purr-fect.
               </h1>
               <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                Together with purr-sonalized support and boutique service.
-              </h2>
-              <h2 className="text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                Everything you need to get your business online, in front of
-                custo-mew-rs.
+                Together with boutique business services, for a paw-to-tail
+                service like no other.
               </h2>
               <div className="relative h-32">
                 <img

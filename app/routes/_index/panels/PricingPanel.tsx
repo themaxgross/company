@@ -57,10 +57,6 @@ const tiers: Tier[] = [
 ];
 
 export default function PricingPanel() {
-  const debug = useSearchDebugParam();
-
-  // if (!debug) return null;
-
   return (
     <Panel>
       <div className="max-w-2xl md:max-w-4xl xl:max-w-6xl mx-auto">

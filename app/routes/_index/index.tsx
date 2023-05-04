@@ -24,7 +24,7 @@ export default function Index() {
       <SpacerPanel />
 
       <HeadlinePanel />
-      {/*<IntroAboutPanel />*/}
+      <IntroAboutPanel />
       {/*<TroyPanel />*/}
       {/*<FeaturesPanel />*/}
       <PricingPanel />
