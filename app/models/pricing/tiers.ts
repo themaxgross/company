@@ -1,6 +1,6 @@
 export type Tiers = "basic" | "plus" | "pro";
 
-interface Tier {
+export interface TierType {
   name: string;
   id: Tiers;
   href: string;
@@ -10,7 +10,7 @@ interface Tier {
   recommendedOption?: boolean;
 }
 
-export const tiers: Tier[] = [
+export const tiers: TierType[] = [
   {
     name: "Economy Basic",
     id: "basic",
