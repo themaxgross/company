@@ -49,17 +49,17 @@ export default function PricingPage() {
                 </h2>
                 <p
                   className="mt-2 text-4xl font-semibold font-raleway tracking-tight text-gray-900 sm:text-5xl
-                dark:text-brand-white"
+                             dark:text-brand-white"
                 >
                   Simple, tail-ored pricing
                 </p>
               </div>
-              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
+              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-7 text-gray-600 dark:text-brand-white">
                 Choose an affordable plan that's packed with the best features
                 for engaging your audience, creating customer loyalty, and
                 driving sales.
               </p>
-              <p className="mx-auto mt-2 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
+              <p className="mx-auto mt-2 max-w-2xl text-center text-lg leading-7 text-gray-600 dark:text-brand-white">
                 Cat approval not included.
               </p>
               <PricingTable tiers={tiers} />
