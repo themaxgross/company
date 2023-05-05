@@ -51,7 +51,7 @@ export default function PricingPage() {
                   className="mt-2 text-4xl font-semibold font-raleway tracking-tight text-gray-900 sm:text-5xl
                 dark:text-brand-white"
                 >
-                  Simple, transparent pricing
+                  Simple, tail-ored pricing
                 </p>
               </div>
               <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-brand-white">
