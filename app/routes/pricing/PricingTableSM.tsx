@@ -4,6 +4,46 @@ import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
 import { sections } from "~/models/pricing/sections";
 import { HiCheckCircle } from "react-icons/hi2";
+import { FeatureDescriptionModal } from "~/routes/pricing/FeatureName";
+import { useState } from "react";
+
+const FeatureName = ({
+  name,
+  additionalInfo,
+  description,
+}: {
+  name: string;
+  additionalInfo?: string;
+  description?: string;
+}) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <span
+        onClick={description ? () => setOpen((isOpen) => !isOpen) : undefined}
+        className={clsx(
+          description ? "cursor-pointer underline underline-offset-2" : ""
+        )}
+      >
+        {name}{" "}
+        {additionalInfo === "string" ? (
+          <span className="text-sm leading-6 text-gray-500 dark:text-gray-400">
+            ({additionalInfo})
+          </span>
+        ) : null}
+      </span>
+      {description ? (
+        <FeatureDescriptionModal
+          name={name}
+          description={description}
+          open={open}
+          setOpen={setOpen}
+        />
+      ) : null}
+    </>
+  );
+};
 
 function TierSection({ tier }: { tier: TierType }) {
   return (
@@ -45,14 +85,15 @@ function TierSection({ tier }: { tier: TierType }) {
                       className="h-6 w-5 flex-none text-brand-primary dark:text-brand-white"
                       aria-hidden="true"
                     />
-                    <span>
-                      {feature.name}{" "}
-                      {typeof feature.tiers[tier.id] === "string" ? (
-                        <span className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-                          ({feature.tiers[tier.id]})
-                        </span>
-                      ) : null}
-                    </span>
+                    <FeatureName
+                      name={feature.name}
+                      additionalInfo={
+                        typeof feature.tiers[tier.id] === "string"
+                          ? (feature.tiers[tier.id] as string)
+                          : undefined
+                      }
+                      description={feature.description}
+                    />
                   </li>
                 ) : null
               )}

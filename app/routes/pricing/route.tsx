@@ -8,6 +8,7 @@ import { tiers } from "~/models/pricing/tiers";
 
 import PricingTableSM from "./PricingTableSM";
 import PricingTableXL from "./PricingTableXL";
+import { Outlet } from "@remix-run/react";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -65,7 +66,6 @@ export default function PricingPage() {
             </div>
           </div>
         </div>
-
         <Footer />
       </div>
     </div>

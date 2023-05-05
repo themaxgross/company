@@ -3,9 +3,45 @@ import type { TierType } from "~/models/pricing/tiers";
 import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
 import { sections } from "~/models/pricing/sections";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import clsx from "clsx";
 import { HiCheckCircle, HiMinusCircle } from "react-icons/hi2";
+import { FeatureDescriptionModal } from "~/routes/pricing/FeatureName";
+
+const FeatureName = ({
+  name,
+  description,
+}: {
+  name: string;
+  description?: string;
+}) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <th
+      scope="row"
+      className={clsx(
+        "py-4 text-sm font-normal leading-6 text-gray-900 dark:text-brand-white",
+        description
+          ? "cursor-pointer underline underline-offset-2 decoration-dotted"
+          : ""
+      )}
+      onClick={description ? () => setOpen((isOpen) => !isOpen) : undefined}
+    >
+      {name}
+      <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5 dark:bg-brand-white/20" />
+
+      {description ? (
+        <FeatureDescriptionModal
+          name={name}
+          description={description}
+          open={open}
+          setOpen={setOpen}
+        />
+      ) : null}
+    </th>
+  );
+};
 
 export default function PricingTableXL({ tiers }: { tiers: TierType[] }) {
   return (
@@ -83,13 +119,11 @@ export default function PricingTableXL({ tiers }: { tiers: TierType[] }) {
                 </tr>
                 {section.features.map((feature) => (
                   <tr key={feature.name}>
-                    <th
-                      scope="row"
-                      className="py-4 text-sm font-normal leading-6 text-gray-900 dark:text-brand-white"
-                    >
-                      {feature.name}
-                      <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5 dark:bg-brand-white/20" />
-                    </th>
+                    <FeatureName
+                      name={feature.name}
+                      description={feature.description}
+                    />
+
                     {tiers.map((tier) => (
                       <td key={tier.id} className="px-6 py-4 xl:px-8">
                         {typeof feature.tiers[tier.id] === "string" ? (

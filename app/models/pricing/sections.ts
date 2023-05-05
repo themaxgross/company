@@ -5,10 +5,11 @@ interface PricingTableSection {
   features: PricingTableFeature[];
 }
 
-interface PricingTableFeature {
+export type PricingTableFeature = {
   name: string;
   tiers: Record<Tiers, boolean | string>;
-}
+  description?: string;
+};
 
 const WebsiteSection: PricingTableSection = {
   name: "Web services",
