@@ -25,6 +25,9 @@ dependencies:
   '@tailwindcss/forms':
     specifier: ^0.5.3
     version: 0.5.3(tailwindcss@3.3.1)
+  '@typeform/embed-react':
+    specifier: ^2.21.0
+    version: 2.21.0(react@18.2.0)
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -43,9 +46,6 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
-  react-hook-form:
-    specifier: ^7.43.9
-    version: 7.43.9(react@18.2.0)
   react-icons:
     specifier: ^4.8.0
     version: 4.8.0(react@18.2.0)
@@ -2482,6 +2482,22 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /@typeform/embed-react@2.21.0(react@18.2.0):
+    resolution: {integrity: sha512-gEiBVoeEzNBeiWqOOFATcKz62A2lVKsmIwcGC5a432OTIJVGZG2rcWVA4NUYwJnL/TS9+OEsk5ot/cppMeXsoQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      '@typeform/embed': 2.11.0
+      fast-deep-equal: 3.1.3
+      react: 18.2.0
+    dev: false
+
+  /@typeform/embed@2.11.0:
+    resolution: {integrity: sha512-MEckCfqsqj4z00w5b3D4nK1ix4Elm15L4xsgAkFX7NuCLETa9TZD/vqARlBb63yqR5tPD4LW1mw/ftBBoeIQgA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
@@ -4486,7 +4502,6 @@ packages:
 
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
-    dev: true
 
   /fast-glob@3.2.11:
     resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
@@ -7202,15 +7217,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-hook-form@7.43.9(react@18.2.0):
-    resolution: {integrity: sha512-AUDN3Pz2NSeoxQ7Hs6OhQhDr6gtF9YRuutGDwPQqhSUAHJSgGl2VeY3qN19MG0SucpjgDiuMJ4iC5T5uB+eaNQ==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-icons@4.8.0(react@18.2.0):
