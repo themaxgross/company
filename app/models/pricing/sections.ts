@@ -22,7 +22,7 @@ const WebsiteSection: PricingTableSection = {
       },
     },
     {
-      name: "Custom domain",
+      name: "Custom domain name registration",
       tiers: {
         basic: true,
         plus: true,
@@ -81,6 +81,22 @@ const WebsiteSection: PricingTableSection = {
       name: "No-worry limits on traffic",
       tiers: {
         basic: true,
+        plus: true,
+        pro: true,
+      },
+    },
+    {
+      name: "Standard domain name system (DNS) services",
+      tiers: {
+        basic: true,
+        plus: true,
+        pro: true,
+      },
+    },
+    {
+      name: "Advanced DNS services",
+      tiers: {
+        basic: false,
         plus: true,
         pro: true,
       },
