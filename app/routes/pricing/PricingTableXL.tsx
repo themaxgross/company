@@ -3,6 +3,7 @@ import type { TierType } from "~/models/pricing/tiers";
 import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
 import { sections } from "~/models/pricing/sections";
+import type { ReactElement } from "react";
 import { Fragment, useState } from "react";
 import clsx from "clsx";
 import { HiCheckCircle, HiMinusCircle } from "react-icons/hi2";
@@ -13,7 +14,7 @@ const FeatureName = ({
   description,
 }: {
   name: string;
-  description?: string;
+  description?: ReactElement;
 }) => {
   const [open, setOpen] = useState(false);
 

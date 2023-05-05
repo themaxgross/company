@@ -1,7 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/react";
 
-import { Header } from "~/components/pricing/layout/Header";
-import { Footer } from "~/components/pricing/layout/Footer";
+import { Header } from "~/components/layout/Header";
+import { Footer } from "~/components/layout/Footer";
 
 import type { TierType } from "~/models/pricing/tiers";
 import { tiers } from "~/models/pricing/tiers";

@@ -1,6 +1,6 @@
 import React from "react";
 import Panel from "~/components/Panel";
-import { Footer } from "~/components/pricing/layout/Footer";
+import { Footer } from "~/components/layout/Footer";
 
 export default function FooterPanel() {
   return (

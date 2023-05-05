@@ -1,5 +1,4 @@
-import { useState } from "react";
-import clsx from "clsx";
+import type { ReactElement } from "react";
 import { Dialog } from "@headlessui/react";
 
 export const FeatureDescriptionModal = ({
@@ -9,7 +8,7 @@ export const FeatureDescriptionModal = ({
   setOpen,
 }: {
   name: string;
-  description: string;
+  description: ReactElement;
   open: boolean;
   setOpen: (open: boolean) => void;
 }) => {
@@ -21,7 +20,7 @@ export const FeatureDescriptionModal = ({
     >
       <Dialog.Overlay className="fixed inset-0 bg-black/50" />
       <Dialog.Panel className="relative z-10 w-screen h-screen flex flex-col justify-center items-center">
-        <div className="p-4 bg-white text-gray-900 dark:bg-brand-primary-950 dark:text-brand-white">
+        <div className="p-4 bg-white text-gray-900 dark:bg-brand-primary-950 dark:text-brand-white max-w-2xl">
           <Dialog.Title
             as="h3"
             className="text-xl md:text-2xl font-futura leading-6 text-gray-900 dark:text-brand-white mb-2"
