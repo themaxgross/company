@@ -4,7 +4,8 @@ import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
 import { sections } from "~/models/pricing/sections";
 import { HiCheckCircle } from "react-icons/hi2";
-import { FeatureDescriptionModal } from "~/routes/pricing/FeatureName";
+import { FeatureDescriptionModal } from "./FeatureDescriptionModal";
+import type { ReactElement } from "react";
 import { useState } from "react";
 
 const FeatureName = ({
@@ -14,7 +15,7 @@ const FeatureName = ({
 }: {
   name: string;
   additionalInfo?: string;
-  description?: string;
+  description?: ReactElement;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -68,16 +69,13 @@ function TierSection({ tier }: { tier: TierType }) {
         href={tier.href}
         recommended={tier.recommendedOption}
       />
-      <ul
-        role="list"
-        className="mt-10 space-y-4 text-sm leading-6 text-gray-900 dark:text-brand-white"
-      >
+      <ul className="mt-10 space-y-4 text-sm leading-6 text-gray-900 dark:text-brand-white">
         {sections.map((section) => (
           <li key={section.name}>
             <h4 className="font-medium text-lg leading-5 text-gray-900 dark:text-brand-white font-futura mt-8 mb-3 text-center">
               {section.name}
             </h4>
-            <ul role="list" className="space-y-4">
+            <ul className="space-y-4">
               {section.features.map((feature) =>
                 feature.tiers[tier.id] ? (
                   <li key={feature.name} className="flex gap-x-3">

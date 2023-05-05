@@ -7,7 +7,7 @@ import type { ReactElement } from "react";
 import { Fragment, useState } from "react";
 import clsx from "clsx";
 import { HiCheckCircle, HiMinusCircle } from "react-icons/hi2";
-import { FeatureDescriptionModal } from "~/routes/pricing/FeatureName";
+import { FeatureDescriptionModal } from "./FeatureDescriptionModal";
 
 const FeatureName = ({
   name,
