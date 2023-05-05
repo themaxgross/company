@@ -86,13 +86,18 @@ const WebsiteSection: PricingTableSection = {
         pro: true,
       },
       description: (
-        <p>
-          Your site will be set up with the CloudFlare global content delivery
-          network. A CDN is a global network of caching servers that keep copies
-          of site content in locations physically close to your visitor’s
-          device; this reduces the time it takes to serve assets, like images
-          and script files, to the browser.
-        </p>
+        <>
+          <p className="mb-4">
+            Your site will be set up with the CloudFlare global content delivery
+            network.
+          </p>
+          <p>
+            A CDN is a global network of caching servers that keep copies of
+            site content in locations physically close to your visitor’s device;
+            this reduces the time it takes to serve assets, like images and
+            script files, to the browser.
+          </p>
+        </>
       ),
     },
     {
