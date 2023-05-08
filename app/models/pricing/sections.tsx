@@ -101,6 +101,28 @@ const WebsiteSection: PricingTableSection = {
       ),
     },
     {
+      name: "Jetpack for WordPress",
+      tiers: {
+        basic: true,
+        plus: true,
+        pro: true,
+      },
+      description: (
+        <>
+          <p className="mb-4">
+            Jetpack is a suite of tools for WordPress that provides a range of
+            features, including site statistics, social media integration, and
+            security tools.
+          </p>
+          <p>
+            It's included as part of your site, and we'll set it up for you. The
+            exact plan will depend on your needs; we'll discuss this with you
+            and you can request to change the plan at any time.
+          </p>
+        </>
+      ),
+    },
+    {
       name: "Custom plugins and themes",
       tiers: {
         basic: true,
