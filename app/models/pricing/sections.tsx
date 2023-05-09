@@ -103,7 +103,7 @@ const WebsiteSection: PricingTableSection = {
     {
       name: "Jetpack for WordPress",
       tiers: {
-        basic: true,
+        basic: "Basic services",
         plus: true,
         pro: true,
       },
