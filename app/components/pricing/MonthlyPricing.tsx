@@ -3,6 +3,9 @@ export function MonthlyPricing({ priceMonthly }: { priceMonthly?: string }) {
     <p className="mt-6 flex items-baseline gap-x-1">
       {priceMonthly ? (
         <>
+          <span className="text-sm font-semibold leading-6 text-gray-600 dark:text-brand-white">
+            Starting at{" "}
+          </span>
           <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-brand-white">
             {priceMonthly}
           </span>

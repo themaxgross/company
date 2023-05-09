@@ -15,7 +15,7 @@ export const tiers: TierType[] = [
     name: "Economy Basic",
     id: "basic",
     href: "/contact",
-    priceMonthly: "$69",
+    priceMonthly: "$89",
     description: "The basics to get your business up and running on the web.",
     features: [
       "WordPress site with custom domain, SSL, and CDN",
@@ -28,7 +28,7 @@ export const tiers: TierType[] = [
     name: "Economy Plus",
     id: "plus",
     href: "/contact",
-    priceMonthly: "$119",
+    priceMonthly: "$149",
     description:
       "High-touch services for a professional web presence, designed to ensure your business looks great.",
     features: [
