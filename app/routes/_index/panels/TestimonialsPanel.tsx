@@ -3,15 +3,17 @@ import Panel from "~/components/Panel";
 import GYangPhoto from "~/images/_TLJ5950.jpeg";
 import Image from "~/components/Image";
 
+import { HiOutlineExternalLink } from "react-icons/hi";
+
 export default function TestimonialsPanel() {
   return (
     <Panel className="">
-      <div className="pb-20 md:pb-24 bg-brand-white dark:bg-brand-primary-600">
+      <div className="pb-20 md:pb-24 bg-white dark:bg-brand-primary-600">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <Image
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[30%_30%]"
                 src={GYangPhoto}
                 alt=""
               />
@@ -23,7 +25,7 @@ export default function TestimonialsPanel() {
                 viewBox="0 0 162 128"
                 fill="none"
                 aria-hidden="true"
-                className="absolute left-0 top-0 -z-10 h-32 stroke-white/20"
+                className="absolute -left-12 top-0 -z-10 h-32 stroke-brand-primary/20 dark:stroke-white/20"
               >
                 <path
                   id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"
@@ -31,7 +33,10 @@ export default function TestimonialsPanel() {
                 />
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
-              <blockquote className="font-futura text-xl font-light leading-6 text-white sm:text-2xl sm:leading-9">
+              <blockquote
+                className="font-futura text-xl md:text-2xl font-light leading-6
+               text-brand-primary dark:text-brand-white sm:text-2xl sm:leading-9"
+              >
                 <p className="mb-2 md:mb-4">
                   As a historian, I have a deep appreciation for the importance
                   of preserving and sharing information. That's why I was
@@ -49,17 +54,20 @@ export default function TestimonialsPanel() {
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-semibold text-white font-raleway">
+                <div className="font-normal text-lg md:text-xl text-brand-primary dark:text-brand-white font-raleway">
                   <a
                     href="https://www.histyang.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-gray-300"
+                    className="hover:text-gray-400 underline underline-offset-2 hover:no-underline transition-colors duration-300
+                    flex flex-row items-center
+                    "
                   >
-                    Guangshuo Yang
+                    Guangshuo Yang{" "}
+                    <HiOutlineExternalLink className="inline-block ml-1 h-4 w-4" />
                   </a>
                 </div>
-                <div className="mt-1 text-gray-400 font-raleway">
+                <div className="mt-1 text-gray-400 font-inter text-sm md:text-lg lowercase">
                   Postdoctoral Fellow at Northwestern University
                 </div>
               </figcaption>
