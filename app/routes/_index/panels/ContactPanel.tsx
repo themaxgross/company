@@ -14,7 +14,7 @@ function Divider() {
       </div>
       <div className="relative flex justify-center">
         <span className="bg-brand-primary border-x-4 border-brand-white dark:border-brand-primary dark:bg-brand-primary-700   p-2 text-brand-white">
-          <HiPencil className="h-5 w-5 text-brand-white " aria-hidden="true" />
+          <HiPencil className="h-5 w-5 text-brand-white" aria-hidden="true" />
         </span>
       </div>
     </div>
