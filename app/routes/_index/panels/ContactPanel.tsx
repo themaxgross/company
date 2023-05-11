@@ -47,7 +47,7 @@ export function ContactFormlessPanel() {
 export function ContactFormPanel() {
   return (
     <Panel>
-      <Divider />
+      {/*<Divider />*/}
       <TypeformIntakeForm />
     </Panel>
   );

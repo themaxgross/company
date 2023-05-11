@@ -10,6 +10,7 @@ import ContactPanel from "./panels/ContactPanel";
 import FooterPanel from "./panels/FooterPanel";
 import PhotoPanel from "~/routes/_index/panels/PhotoPanel";
 import PricingPanel from "~/routes/_index/panels/PricingPanel";
+import TestimonialsPanel from "~/routes/_index/panels/TestimonialsPanel";
 
 /* HeadlinePanel handles meta as well, since it's the landing screen */
 export { meta } from "./panels/HeadlinePanel";
@@ -28,6 +29,7 @@ export default function Index() {
       {/*<TroyPanel />*/}
       {/*<FeaturesPanel />*/}
       <PricingPanel />
+      <TestimonialsPanel />
       {/*<PhotoPanel />*/}
       <ContactPanel />
       <FooterPanel />
