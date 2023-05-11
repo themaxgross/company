@@ -59,11 +59,9 @@ export default function TestimonialsPanel() {
                     href="https://www.histyang.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-gray-400 underline underline-offset-2 hover:no-underline transition-colors duration-300
-                    flex flex-row items-center
-                    "
+                    className="hover:text-gray-400 underline underline-offset-2 hover:no-underline flex flex-row items-center"
                   >
-                    Guangshuo Yang{" "}
+                    Guangshuo Yang
                     <HiOutlineExternalLink className="inline-block ml-1 h-4 w-4" />
                   </a>
                 </div>
