@@ -30,6 +30,8 @@ export default async function handleRequest(
     await body.allReady;
   }
 
+  responseHeaders.set("Content-Type", "text/html");
+
   return new Response(body, {
     headers: responseHeaders,
     status: responseStatusCode,
