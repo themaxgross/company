@@ -8,7 +8,6 @@ import type { EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 import { renderToReadableStream } from "react-dom/server";
-import { ADOBE_FONTS_URL } from "~/constants/urls";
 
 export default async function handleRequest(
   request: Request,
@@ -30,12 +29,6 @@ export default async function handleRequest(
   if (isbot(request.headers.get("user-agent"))) {
     await body.allReady;
   }
-
-  responseHeaders.set("Content-Type", "text/html");
-  responseHeaders.set(
-    "Link",
-    "<" + ADOBE_FONTS_URL + ">; rel=preload; as=style"
-  );
 
   return new Response(body, {
     headers: responseHeaders,
