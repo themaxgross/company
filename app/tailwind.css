@@ -1,7 +1,7 @@
 @import "@fontsource/inter/variable-full.css";
 @import "@fontsource/raleway/variable.css";
 @import "@fontsource/raleway/variable-italic.css";
-@import "https://use.typekit.net/wuf0dhh.css";
+@import "//use.typekit.net/wuf0dhh.css";
 
 @tailwind base;
 @tailwind components;
