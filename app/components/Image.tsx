@@ -15,7 +15,7 @@ const domain = "https://leoji.company";
 const sizes = [200, 300, 360, 500, 720, 960, 1200, 1440, 1920, 2560];
 
 const DEFAULT_RESPONSIVE: ResponsiveSize[] = sizes.map((size) => ({
-  minWidth: size,
+  maxWidth: size,
   size: {
     width: size,
   },
@@ -27,12 +27,16 @@ export default function Image({
   options,
   ...props
 }: Omit<ImageProps, "responsive"> & {
-  responsive: false | ImageProps["responsive"];
+  responsive?: false | ResponsiveSize[];
 }) {
   const responsiveProps = useResponsiveImage(
     { src },
     responsive === false ? [] : responsive,
-    { ...options, background: undefined },
+    {
+      quality: 80,
+      ...options,
+      background: undefined,
+    },
     [1],
     "https://leoji.company/cdn-cgi/image",
     cloudflareImagesLoader
