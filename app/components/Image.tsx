@@ -1,4 +1,7 @@
-import type { ImageProps as RemixImageProps } from "remix-image";
+import type {
+  ImageProps as RemixImageProps,
+  ResponsiveSize,
+} from "remix-image";
 import { useResponsiveImage, cloudflareImagesLoader } from "remix-image";
 import { useHydrated } from "remix-utils";
 
@@ -9,15 +12,26 @@ type ImageProps = RemixImageProps & {
 // hardcode the domain for now
 const domain = "https://leoji.company";
 
+const sizes = [200, 300, 360, 500, 720, 960, 1200, 1440, 1920, 2560];
+
+const DEFAULT_RESPONSIVE: ResponsiveSize[] = sizes.map((size) => ({
+  minWidth: size,
+  size: {
+    width: size,
+  },
+}));
+
 export default function Image({
-  responsive,
+  responsive = DEFAULT_RESPONSIVE,
   src,
   options,
   ...props
-}: ImageProps) {
+}: Omit<ImageProps, "responsive"> & {
+  responsive: false | ImageProps["responsive"];
+}) {
   const responsiveProps = useResponsiveImage(
     { src },
-    responsive ?? [],
+    responsive === false ? [] : responsive,
     { ...options, background: undefined },
     [1],
     "https://leoji.company/cdn-cgi/image",
