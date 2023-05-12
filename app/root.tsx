@@ -1,4 +1,3 @@
-import type { V2_MetaFunction } from "@remix-run/react";
 import {
   Links,
   LiveReload,
@@ -40,28 +39,26 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export const meta: V2_MetaFunction = () => {
-  return [{ charSet: "utf-8" }];
-};
-
-export default function App() {
+export default function Root() {
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
 
-        {/*/!* Fixed link, meta values not managed by Remix *!/*/}
-        {/*<meta name="viewport" content="width=device-width,initial-scale=1" />*/}
-        {/*<meta name="theme-color" content="#0e1c38" />*/}
-        {/*<meta name="twitter:card" content="summary_large_image" />*/}
-        {/*<meta name="twitter:site" content="@theleoji" />*/}
-        {/*<meta name="twitter:creator" content="@theleoji" />*/}
+        {/* Fixed link, meta values not managed by Remix */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#0e1c38" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@theleoji" />
+        <meta name="twitter:creator" content="@theleoji" />
       </head>
       <body className="font-inter">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
+
         <LiveReload />
       </body>
     </html>
