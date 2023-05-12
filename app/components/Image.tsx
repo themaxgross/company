@@ -18,7 +18,7 @@ export default function Image({
   const responsiveProps = useResponsiveImage(
     { src },
     responsive ?? [],
-    options,
+    { ...options, background: undefined },
     [1],
     "https://leoji.company/cdn-cgi/image",
     cloudflareImagesLoader
