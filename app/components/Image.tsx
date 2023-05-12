@@ -13,13 +13,12 @@ export default function Image({
   responsive,
   src,
   options,
-
   ...props
 }: ImageProps) {
   const isHydrated = useHydrated();
 
   const isDev = process.env.NODE_ENV === "development";
-  const useCloudflare = !isDev && false; // force false; disable cloudflare images for now
+  const useCloudflare = !isDev;
 
   // If src does not start with a domain, then it is a local image
   // and we need to add the domain to the src
@@ -31,12 +30,20 @@ export default function Image({
   // After hydration, we'll swap out the static, fixed image for a responsive image managed by Remix Image.
   // This balances the tradeoff between server-side rendering and client-side hydration and avoids issues with low-quality images remaining on the page after hydration.
   if (!isHydrated || !useCloudflare) {
-    return <RemixImage {...props} src={src} responsive={undefined} />;
+    return (
+      <RemixImage
+        data-remix-static={true}
+        {...props}
+        src={src}
+        responsive={undefined}
+      />
+    );
   }
 
   return (
     <RemixImage
       {...props}
+      data-remix-static={false}
       src={src}
       options={{
         ...options,

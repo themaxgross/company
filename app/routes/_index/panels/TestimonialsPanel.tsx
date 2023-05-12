@@ -16,6 +16,14 @@ export default function TestimonialsPanel() {
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[30%_30%]"
                 src={GYangPhoto}
                 alt=""
+                responsive={[
+                  {
+                    maxWidth: 768,
+                    size: {
+                      width: 768,
+                    },
+                  },
+                ]}
               />
             </div>
           </div>
