@@ -1,6 +1,6 @@
 export function MonthlyPricing({ priceMonthly }: { priceMonthly?: string }) {
   return (
-    <p className="mt-6 flex items-baseline gap-x-1">
+    <div className="mt-6 flex items-baseline gap-x-1">
       {priceMonthly ? (
         <div className="flex flex-col gap-y-1">
           <div>
@@ -25,6 +25,6 @@ export function MonthlyPricing({ priceMonthly }: { priceMonthly?: string }) {
           Contact for pricing
         </span>
       )}
-    </p>
+    </div>
   );
 }
