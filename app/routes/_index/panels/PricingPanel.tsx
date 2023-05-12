@@ -11,10 +11,11 @@ import { Link } from "@remix-run/react";
 export default function PricingPanel() {
   return (
     <Panel>
-      <div className="max-w-2xl md:max-w-4xl xl:max-w-6xl mx-auto">
+      <div className="max-w-2xl md:max-w-4xl xl:max-w-6xl mx-auto pb-8">
         <div
           className="isolate grid max-w-md grid-cols-1 gap-y-8
-                     lg:mx-0 lg:max-w-none lg:grid-cols-3"
+                     lg:mx-0 lg:max-w-none lg:grid-cols-3
+                     mx-auto"
         >
           {tiers.map((tier, tierIdx) => (
             <div
@@ -28,7 +29,7 @@ export default function PricingPanel() {
                 "flex flex-col justify-between rounded-3xl",
                 "bg-white dark:bg-slate-900",
                 "ring-1 ring-gray-200",
-                "p-8 xl:p-10"
+                "p-8 xl:p-10 mx-auto"
               )}
             >
               <div>
