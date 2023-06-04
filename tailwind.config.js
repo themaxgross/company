@@ -46,12 +46,6 @@ module.exports = {
   plugins: [
     require("tailwindcss-opentype"),
     require("@tailwindcss/forms"),
-    plugin(function ({ addUtilities }) {
-      addUtilities({
-        ".text-balance": {
-          "text-wrap": "balance",
-        },
-      });
-    }),
+    require("tailwindcss-text-balance"),
   ],
 };
