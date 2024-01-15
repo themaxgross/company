@@ -56,6 +56,9 @@ export default function Image({
   // In server mode and prior to hydration, we use a single, static image.
   // After hydration, we'll swap out the static, fixed image for a responsive image managed by Remix Image.
   // This balances the tradeoff between server-side rendering and client-side hydration and avoids issues with low-quality images remaining on the page after hydration.
+  if (!isHydrated || isDev) {
+    return <img data-remix-static={false} {...props} src={src} />;
+  }
 
   return <img data-remix-static={false} {...props} {...responsiveProps} />;
 }
