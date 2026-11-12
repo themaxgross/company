@@ -5,9 +5,10 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "start": "cross-env NODE_ENV=production pnpm run wrangler",
+    "start": "pnpm build && cross-env NODE_ENV=production pnpm run wrangler",
     "typecheck": "tsc",
-    "wrangler": "wrangler pages dev ./build/client"
+    "wrangler": "wrangler dev",
+    "deploy": "pnpm build && wrangler deploy"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
@@ -15,7 +16,6 @@
     "@headlessui/react": "^2.2.10",
     "@prisma/client": "^7.10.1",
     "@remix-run/cloudflare": "^2.17.5",
-    "@remix-run/cloudflare-pages": "^2.17.5",
     "@remix-run/react": "^2.17.5",
     "@tailwindcss/forms": "^0.5.11",
     "@typeform/embed-react": "^5.5.0",
@@ -42,7 +42,7 @@
     "typescript": "^5.9.3",
     "vite": "^6.4.6",
     "vite-tsconfig-paths": "^6.1.1",
-    "wrangler": "^3.114.17"
+    "wrangler": "^4.0.0"
   },
   "engines": {
     "node": ">=22.22"
