@@ -1,4 +1,4 @@
-import type { V2_MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
 
 import { Header } from "~/components/layout/Header";
 import { Footer } from "~/components/layout/Footer";
@@ -10,7 +10,7 @@ import PricingTableSM from "./PricingTableSM";
 import PricingTableXL from "./PricingTableXL";
 import { Outlet } from "@remix-run/react";
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     {
       title: "Pricing | Leo Ji LLC",

@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogBackdrop, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
 export const FeatureDescriptionModal = ({
@@ -27,7 +27,7 @@ export const FeatureDescriptionModal = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Dialog.Overlay className="fixed inset-0 bg-black/50" />
+          <DialogBackdrop className="fixed inset-0 bg-black/50" />
         </Transition.Child>
         <Transition.Child
           enter="ease-out duration-300"

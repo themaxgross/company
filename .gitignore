@@ -1,11 +1,12 @@
 node_modules
+.wrangler
 
 .idea
 
 /.cache
-/functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
 /public/build
+/build
 
 .env
 .env.development

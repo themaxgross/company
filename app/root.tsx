@@ -1,22 +1,18 @@
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
 
-import type { LinksFunction } from "@remix-run/server-runtime";
+import type { LinksFunction } from "@remix-run/cloudflare";
 
-import styles from "./tailwind.css";
-
-import remixImageStyles from "remix-image/remix-image.css";
+import styles from "./tailwind.css?url";
 
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
-    { rel: "stylesheet", href: remixImageStyles },
     { rel: "icon", href: "/favicon.ico" },
     {
       rel: "apple-touch-icon",
@@ -58,8 +54,6 @@ export default function Root() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-
-        <LiveReload />
       </body>
     </html>
   );

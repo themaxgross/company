@@ -1,9 +1,46 @@
-@import "@fontsource/inter/variable-full.css";
-@import "@fontsource/raleway/variable.css";
-@import "@fontsource/raleway/variable-italic.css";
-@import "//use.typekit.net/wuf0dhh.css";
+@import url("https://use.typekit.net/wuf0dhh.css");
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/raleway";
+@import "@fontsource-variable/raleway/wght-italic.css";
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@source "./";
+
+@plugin "tailwindcss-opentype";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --font-inter: Inter, sans-serif;
+  --font-raleway: Raleway, sans-serif;
+  --font-futura: "Futura PT", Futura, sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+
+  --color-brand-primary: #0e1c38;
+  --color-brand-primary-50: #bdcdee;
+  --color-brand-primary-100: #94afe4;
+  --color-brand-primary-200: #4271d0;
+  --color-brand-primary-300: #22458a;
+  --color-brand-primary-400: #0e1c38;
+  --color-brand-primary-500: #0c1830;
+  --color-brand-primary-600: #0a1428;
+  --color-brand-primary-700: #081020;
+  --color-brand-primary-800: #060c17;
+  --color-brand-primary-900: #04080f;
+  --color-brand-primary-950: #03060b;
+  --color-brand-white: #f4f6fb;
+
+  --container-8xl: 90rem;
+  --container-9xl: 100rem;
+  --container-10xl: 110rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

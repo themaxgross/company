@@ -3,7 +3,7 @@ import Panel from "~/components/Panel";
 import lensPhoto from "~/images/DSCF4326.jpeg";
 import Image from "~/components/Image";
 import Button from "~/components/Button";
-import { HiOutlineExternalLink } from "react-icons/all";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function PhotoPanel() {
   return (
