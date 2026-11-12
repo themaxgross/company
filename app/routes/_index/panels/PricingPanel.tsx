@@ -85,16 +85,6 @@ export default function PricingPanel() {
             </div>
           ))}
         </div>
-        <div className="mt-4 md:mt-8 mb-10 md:mb-32 text-center">
-          <a
-            href="/pricing"
-            className="
-            text-sm
-            font-medium underline hover:no-underline text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200"
-          >
-            View detailed pricing
-          </a>
-        </div>
       </div>
     </Panel>
   );

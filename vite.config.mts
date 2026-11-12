@@ -12,7 +12,6 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL("./index.html", import.meta.url)),
         contact: fileURLToPath(new URL("./contact/index.html", import.meta.url)),
-        pricing: fileURLToPath(new URL("./pricing/index.html", import.meta.url)),
       },
     },
   },
