@@ -1,18 +1,4 @@
-import type { MetaFunction } from "@remix-run/react";
 import TypeformIntakeForm from "~/components/forms/typeform/IntakeForm";
-
-export const meta: MetaFunction = () => {
-  return [
-    {
-      title: "Contact | Leo Ji LLC",
-    },
-    {
-      name: "description",
-      content:
-        "Let's get started on creating the purr-fect website for your business.",
-    },
-  ];
-};
 
 export default function Contact() {
   return (

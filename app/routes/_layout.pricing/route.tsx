@@ -1,28 +1,8 @@
-import type { MetaFunction } from "@remix-run/react";
-
-import { Header } from "~/components/layout/Header";
-import { Footer } from "~/components/layout/Footer";
-
 import type { TierType } from "~/models/pricing/tiers";
 import { tiers } from "~/models/pricing/tiers";
 
 import PricingTableSM from "./PricingTableSM";
 import PricingTableXL from "./PricingTableXL";
-import { Outlet } from "@remix-run/react";
-
-export const meta: MetaFunction = () => {
-  return [
-    {
-      title: "Pricing | Leo Ji LLC",
-    },
-    {
-      name: "description",
-      content:
-        "Choose an affordable plan that's packed with the best features for engaging your audience, creating customer loyalty, and driving sales.",
-    },
-  ];
-};
-
 const PricingTable = ({ tiers }: { tiers: TierType[] }) => {
   return (
     <>

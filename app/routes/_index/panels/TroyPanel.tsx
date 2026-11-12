@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "@remix-run/react";
 
 import Button from "~/components/Button";
 import Image from "~/components/Image";
@@ -43,11 +42,11 @@ export default function TroyPanel() {
             2020 during the COVID-19 pandemic.
           </p>
           {debugMode ? (
-            <Link to="/troy" className="mt-2 md:mt-3">
+            <a href="/troy" className="mt-2 md:mt-3">
               <Button className="flex flex-row justify-center items-center">
                 <span className="mr-2">🐈</span> Learn more about Troy
               </Button>
-            </Link>
+            </a>
           ) : null}
         </div>
       </div>

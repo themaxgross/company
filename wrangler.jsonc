@@ -1,18 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "company",
-  "main": "./worker.ts",
-  "compatibility_date": "2022-04-05",
-  "compatibility_flags": ["streams_enable_constructors"],
+  "compatibility_date": "2026-11-12",
   "previews": {},
   "observability": {
     "logs": {
       "enabled": true,
       "invocation_logs": true
     }
-  },
-  "assets": {
-    "directory": "./build/client",
-    "binding": "ASSETS"
   }
 }

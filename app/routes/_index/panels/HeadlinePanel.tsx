@@ -1,35 +1,6 @@
 import logo from "~/images/logos/lj.svg";
 import React from "react";
 import Panel from "~/components/Panel";
-import type { MetaFunction } from "@remix-run/react";
-
-import socialShareDefaultImage from "~/images/logos/social-share-default.png";
-export const meta: MetaFunction = () => {
-  return [
-    {
-      title: "Leo Ji, a paw-some boutique web developer and designer",
-    },
-    {
-      name: "description",
-      content:
-        "Web developer and designer offering a paw-to-tail boutique service like no other.",
-    },
-    {
-      property: "og:title",
-      content: "Leo Ji, a paw-some boutique web developer and designer",
-    },
-    {
-      property: "og:description",
-      content:
-        "Web developer and designer offering a paw-to-tail boutique service like no other.",
-    },
-    {
-      property: "og:image",
-      content: socialShareDefaultImage,
-    },
-  ];
-};
-
 export const HeadlinePanel = () => {
   return (
     <Panel className="flex flex-row justify-stretch items-stretch">

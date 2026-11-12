@@ -1,7 +1,6 @@
 import React from "react";
 import Panel from "~/components/Panel";
 import Button from "~/components/Button";
-import { Link } from "@remix-run/react";
 
 import { FaEnvelopeOpenText } from "react-icons/fa";
 
@@ -21,12 +20,12 @@ export default function IntroAboutPanel() {
             Ready to find out how to supercharge your business online?
           </h2>
           <div className="mt-6 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-            <Link to="contact">
+            <a href="/contact">
               <Button className="flex flex-row justify-center items-center">
                 <FaEnvelopeOpenText className="mr-2" />
                 <span>Get in touch</span>
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
