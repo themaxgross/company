@@ -13,7 +13,7 @@ export default function Panel({
   return (
     <div
       className={clsx(
-        "bg-brand-primary dark:bg-gray-300",
+        "bg-brand-primary dark:bg-brand-gold-400",
         "px-2 md:px-8",
         className
       )}

@@ -3,9 +3,9 @@ import React from "react";
 import clsx from "clsx";
 
 const defaultClasses =
-  "rounded-md bg-brand-primary-800 hover:bg-brand-primary-300 " +
+  "rounded-md bg-brand-primary-800 hover:bg-brand-gold-300 " +
   "px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm " +
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold-300";
 
 export default function Button({
   children,

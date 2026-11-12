@@ -15,7 +15,7 @@ export const HeadlinePanel = () => {
                 <img
                   src={logo}
                   alt=""
-                  className="w-32 h-32 absolute border-2 border-brand-white left-0 right-0 top-0 mt-8 mx-auto md:left-auto md:right-auto"
+                  className="w-32 h-32 absolute border-2 border-brand-gold-300 left-0 right-0 top-0 mt-8 mx-auto md:left-auto md:right-auto"
                 />
               </div>
             </div>

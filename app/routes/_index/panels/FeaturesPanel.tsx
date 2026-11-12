@@ -58,7 +58,7 @@ export default function FeaturesPanel() {
                       <dt className="text-xl font-semibold text-gray-900 dark:text-gray-200 font-futura tracking-loose">
                         <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-primary-800 dark:bg-brand-primary-700">
                           <feature.icon
-                            className="h-6 w-6 text-brand-white dark:text-brand-primary-50"
+                            className="h-6 w-6 text-brand-white dark:text-brand-gold-100"
                             aria-hidden="true"
                           />
                         </div>
