@@ -4,6 +4,12 @@
 
 ## Development
 
+Install dependencies with npm:
+
+```sh
+npm install
+```
+
 You will be utilizing Wrangler for local development to emulate the Cloudflare runtime. This is already wired up in your package.json as the `dev` script:
 
 ```sh
