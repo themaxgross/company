@@ -1,9 +1,7 @@
-import type { LoaderFunction } from "@remix-run/server-runtime";
-import { redirect } from "@remix-run/server-runtime";
-import type { V2_MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
 import TypeformIntakeForm from "~/components/forms/typeform/IntakeForm";
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     {
       title: "Contact | Leo Ji LLC",

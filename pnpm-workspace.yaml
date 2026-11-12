@@ -1,0 +1,8 @@
+allowBuilds:
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  sharp: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - prettier@3.10.0

@@ -1,23 +1,32 @@
-import type {
-  ImageProps as RemixImageProps,
-  ResponsiveSize,
-} from "remix-image";
-import { useResponsiveImage, cloudflareImagesLoader } from "remix-image";
-import { useHydrated } from "remix-utils";
+import type { ImgHTMLAttributes } from "react";
 
-type ImageProps = RemixImageProps & {
-  loader?: never;
-  loaderUrl?: never;
+type ResponsiveSize = {
+  maxWidth?: number;
+  size: {
+    width: number;
+  };
 };
-// hardcode the domain for now
+
+type ImageProps = Omit<
+  ImgHTMLAttributes<HTMLImageElement>,
+  "sizes" | "src" | "srcSet"
+> & {
+  options?: {
+    fit?: string;
+    position?: string;
+  };
+  responsive?: false | ResponsiveSize[];
+  sizes?: string;
+  src?: string;
+};
+
 const domain = "https://leoji.company";
 
 const sizes = [200, 300, 360, 500, 720, 960, 1200, 1440, 1920, 2560];
 
-const DEFAULT_RESPONSIVE: ResponsiveSize[] = sizes.map((size) => ({
-  maxWidth: size,
+const DEFAULT_RESPONSIVE: ResponsiveSize[] = sizes.map((width) => ({
   size: {
-    width: size,
+    width,
   },
 }));
 
@@ -25,40 +34,39 @@ export default function Image({
   responsive = DEFAULT_RESPONSIVE,
   src,
   options,
+  sizes: imageSizes = "100vw",
   ...props
-}: Omit<ImageProps, "responsive"> & {
-  responsive?: false | ResponsiveSize[];
-}) {
-  const responsiveProps = useResponsiveImage(
-    { src },
-    responsive === false ? [] : responsive,
-    {
-      quality: 80,
-      ...options,
-      background: undefined,
-    },
-    [1],
-    "https://leoji.company/cdn-cgi/image",
-    cloudflareImagesLoader
-  );
-
-  const isHydrated = useHydrated();
-
+}: ImageProps) {
   const isDev = process.env.NODE_ENV === "development";
-  const useCloudflare = !isDev;
+  const imageUrl = src && new URL(src, domain).href;
+  const widths =
+    responsive === false
+      ? []
+      : (responsive ?? DEFAULT_RESPONSIVE).map(({ size }) => size.width);
+  const srcSet =
+    !isDev && imageUrl && widths.length > 0
+      ? widths
+          .map((width) => {
+            const optionsString = [
+              `width=${width}`,
+              "quality=80",
+              options?.fit && `fit=${options.fit}`,
+              options?.position &&
+                `position=${options.position.trim().replace(/\s+/g, "_")}`,
+            ]
+              .filter(Boolean)
+              .join(",");
+            return `${domain}/cdn-cgi/image/${optionsString}/${imageUrl} ${width}w`;
+          })
+          .join(", ")
+      : undefined;
 
-  // If src does not start with a domain, then it is a local image
-  // and we need to add the domain to the src
-  if (useCloudflare && src && !src.startsWith("http")) {
-    src = `${domain}${src}`;
-  }
-
-  // In server mode and prior to hydration, we use a single, static image.
-  // After hydration, we'll swap out the static, fixed image for a responsive image managed by Remix Image.
-  // This balances the tradeoff between server-side rendering and client-side hydration and avoids issues with low-quality images remaining on the page after hydration.
-  if (!isHydrated || isDev) {
-    return <img data-remix-static={false} {...props} src={src} />;
-  }
-
-  return <img data-remix-static={false} {...props} {...responsiveProps} />;
+  return (
+    <img
+      {...props}
+      sizes={srcSet ? imageSizes : undefined}
+      src={isDev ? src : imageUrl}
+      srcSet={srcSet}
+    />
+  );
 }
