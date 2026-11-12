@@ -38,15 +38,8 @@ export const HeadlinePanel = () => {
           <div className="text-center sm:text-left">
             <div className="animate-fade-in">
               <h1 className="text-balance text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
-                Websites that load faster than zoomies.
+                Improvements coming soon
               </h1>
-              <h1 className="text-balance text-4xl md:text-5xl xl:text-6xl font-semibold mb-5 md:mb-10 leading-tight font-raleway">
-                Designs that are beyond purr-fect.
-              </h1>
-              <h2 className="text-balance text-2xl md:text-3xl xl:text-4xl font-light mb-5 md:mb-10 leading-tight font-raleway">
-                Together with boutique business services, for a paw-to-tail
-                service like no other.
-              </h2>
               <div className="relative h-32">
                 <img
                   src={logo}
