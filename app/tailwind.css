@@ -12,26 +12,26 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-gold: #d4af37;
-  --color-brand-gold-50: #fff6d8;
-  --color-brand-gold-100: #f4df9b;
-  --color-brand-gold-200: #e5c15a;
-  --color-brand-gold-300: #d4af37;
-  --color-brand-gold-400: #b88d22;
-  --color-brand-gold-500: #8f6c13;
+  --color-brand-gold: #e2c978;
+  --color-brand-gold-50: #fffbed;
+  --color-brand-gold-100: #f8edc8;
+  --color-brand-gold-200: #eedca7;
+  --color-brand-gold-300: #e2c978;
+  --color-brand-gold-400: #c7a957;
+  --color-brand-gold-500: #a4873c;
 
-  --color-brand-primary: #0b0b0b;
+  --color-brand-primary: #191817;
   --color-brand-primary-50: #f2f2f2;
   --color-brand-primary-100: #dddddd;
   --color-brand-primary-200: #c4c4c4;
   --color-brand-primary-300: #a3a3a3;
   --color-brand-primary-400: #737373;
   --color-brand-primary-500: #4a4a4a;
-  --color-brand-primary-600: #2a2a2a;
-  --color-brand-primary-700: #1a1a1a;
-  --color-brand-primary-800: #101010;
-  --color-brand-primary-900: #080808;
-  --color-brand-primary-950: #000000;
+  --color-brand-primary-600: #33312e;
+  --color-brand-primary-700: #282624;
+  --color-brand-primary-800: #211f1c;
+  --color-brand-primary-900: #151412;
+  --color-brand-primary-950: #0d0c0b;
   --color-brand-white: #f5f2e8;
 }
 
