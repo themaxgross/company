@@ -1,5 +1,3 @@
-import { useSearchParams } from "@remix-run/react";
-
 /**
  * @name useSearchDebugParam
  * @param paramName - The name of the search param to check for. Defaults to "debug"
@@ -9,7 +7,7 @@ export function useSearchDebugParam(
   paramName = "debug",
   falsyValues = ["false", "0"]
 ) {
-  const [searchParams] = useSearchParams();
+  const searchParams = new URLSearchParams(window.location.search);
   const debugValue = searchParams.get(paramName);
 
   if (!debugValue) {

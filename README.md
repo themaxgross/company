@@ -1,28 +1,23 @@
-# Welcome to Remix!
+# Leo Ji
 
-- [Remix Docs](https://remix.run/docs)
+The site is a React app built with Vite and the Cloudflare Vite plugin, and deployed as static assets on Cloudflare Workers. The `/`, `/contact`, and `/pricing` pages have separate HTML entry points for their metadata; React renders their content in the browser, so JavaScript is required to view it. Other paths return 404 rather than falling back to the home page.
 
 ## Development
 
-Local development uses Remix's Vite server with Cloudflare's Workers runtime proxy:
+Install dependencies with `npm ci`, then run:
 
 ```sh
-# start the Remix development server
 npm run dev
 ```
 
-Open the URL printed by Vite to view the app.
+Open the URL printed by Vite. Run `npm run typecheck` to check TypeScript.
 
 ## Deployment
 
-The app is deployed to Cloudflare Workers with static assets.
-
-Create a Cloudflare account if needed, then authenticate Wrangler with `npm exec wrangler login`.
-
-Build and deploy with:
+Authenticate Wrangler with `npm exec wrangler login`, then build and deploy with:
 
 ```sh
 npm run deploy
 ```
 
-Run `npm run start` for a local production preview; it builds automatically.
+Run `npm run start` to build and preview the production assets locally in the Workers runtime, or `npm run preview` to preview an existing build.

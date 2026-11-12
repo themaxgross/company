@@ -7,9 +7,10 @@ node_modules
 /functions/\[\[path\]\].js.map
 /public/build
 /build
+/dist
 
 .env
 .env.development
 .env.production
 .env.test
-.dev.vars
+.dev.vars*

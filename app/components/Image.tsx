@@ -37,7 +37,7 @@ export default function Image({
   sizes: imageSizes = "100vw",
   ...props
 }: ImageProps) {
-  const isDev = process.env.NODE_ENV === "development";
+  const isDev = import.meta.env.DEV;
   const imageUrl = src && new URL(src, domain).href;
   const widths =
     responsive === false

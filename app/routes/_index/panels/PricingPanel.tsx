@@ -6,7 +6,6 @@ import clsx from "clsx";
 import { tiers } from "~/models/pricing/tiers";
 import { MonthlyPricing } from "~/components/pricing/MonthlyPricing";
 import { PricingContactButton } from "~/components/pricing/ContactButton";
-import { Link } from "@remix-run/react";
 
 export default function PricingPanel() {
   return (
@@ -87,14 +86,14 @@ export default function PricingPanel() {
           ))}
         </div>
         <div className="mt-4 md:mt-8 mb-10 md:mb-32 text-center">
-          <Link
-            to="/pricing"
+          <a
+            href="/pricing"
             className="
             text-sm
             font-medium underline hover:no-underline text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200"
           >
             View detailed pricing
-          </Link>
+          </a>
         </div>
       </div>
     </Panel>
