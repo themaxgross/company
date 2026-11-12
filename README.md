@@ -8,7 +8,7 @@ Local development uses Remix's Vite server with Cloudflare's Workers runtime pro
 
 ```sh
 # start the Remix development server
-pnpm dev
+npm run dev
 ```
 
 Open the URL printed by Vite to view the app.
@@ -17,12 +17,12 @@ Open the URL printed by Vite to view the app.
 
 The app is deployed to Cloudflare Workers with static assets.
 
-Create a Cloudflare account if needed, then authenticate Wrangler with `pnpm exec wrangler login`.
+Create a Cloudflare account if needed, then authenticate Wrangler with `npm exec wrangler login`.
 
 Build and deploy with:
 
 ```sh
-pnpm deploy
+npm run deploy
 ```
 
-Run `pnpm start` for a local production preview; it builds automatically.
+Run `npm run start` for a local production preview; it builds automatically.
