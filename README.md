@@ -1,6 +1,6 @@
 # Leo Ji
 
-The site is a React app built with Vite and the Cloudflare Vite plugin, and deployed as static assets on Cloudflare Workers. The `/`, `/contact`, and `/pricing` pages have separate HTML entry points for their metadata; React renders their content in the browser, so JavaScript is required to view it. Other paths return 404 rather than falling back to the home page.
+The site is a React app built with Vite and the Cloudflare Vite plugin, and deployed as static assets on Cloudflare Workers. The `/` and `/contact` pages have separate HTML entry points for their metadata; React renders their content in the browser, so JavaScript is required to view it. Other paths return 404 rather than falling back to the home page.
 
 ## Development
 
