@@ -15,8 +15,14 @@ Open the URL printed by Vite to view the app.
 
 ## Deployment
 
-Cloudflare Pages are currently only deployable through their Git provider integrations.
+The app is deployed to Cloudflare Workers with static assets.
 
-If you don't already have an account, then [create a Cloudflare account here](https://dash.cloudflare.com/sign-up/pages) and after verifying your email address with Cloudflare, go to your dashboard and follow the [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything).
+Create a Cloudflare account if needed, then authenticate Wrangler with `pnpm exec wrangler login`.
 
-Configure the build command as `pnpm build` and the build output directory as `build/client`.
+Build and deploy with:
+
+```sh
+pnpm deploy
+```
+
+Run `pnpm start` for a local production preview; it builds automatically.
