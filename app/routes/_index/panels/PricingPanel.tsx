@@ -47,10 +47,10 @@ export default function PricingPanel() {
                   {tier.recommendedOption ? (
                     <p
                       className="rounded-full
-                      bg-brand-primary-600/10
-                      dark:bg-brand-primary-400/60
+                      bg-brand-gold-300/10
+                      dark:bg-brand-gold-400/60
                       px-2.5 py-1 text-xs font-semibold
-                      leading-5 text-brand-primary-600 dark:text-brand-primary-100"
+                      leading-5 text-brand-primary-600 dark:text-brand-gold-100"
                     >
                       Recommended
                     </p>
@@ -68,7 +68,7 @@ export default function PricingPanel() {
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-x-3">
                         <HiCheckCircle
-                          className="h-6 w-5 flex-none text-brand-primary dark:text-brand-primary-200"
+                          className="h-6 w-5 flex-none text-brand-primary dark:text-brand-gold-200"
                           aria-hidden="true"
                         />
                         {feature}

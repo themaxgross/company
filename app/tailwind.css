@@ -9,6 +9,32 @@
 @plugin "tailwindcss-opentype";
 @plugin "@tailwindcss/forms";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-gold: #e2c978;
+  --color-brand-gold-50: #fffbed;
+  --color-brand-gold-100: #f8edc8;
+  --color-brand-gold-200: #eedca7;
+  --color-brand-gold-300: #e2c978;
+  --color-brand-gold-400: #c7a957;
+  --color-brand-gold-500: #a4873c;
+
+  --color-brand-primary: #191817;
+  --color-brand-primary-50: #f2f2f2;
+  --color-brand-primary-100: #dddddd;
+  --color-brand-primary-200: #c4c4c4;
+  --color-brand-primary-300: #a3a3a3;
+  --color-brand-primary-400: #737373;
+  --color-brand-primary-500: #4a4a4a;
+  --color-brand-primary-600: #33312e;
+  --color-brand-primary-700: #282624;
+  --color-brand-primary-800: #211f1c;
+  --color-brand-primary-900: #151412;
+  --color-brand-primary-950: #0d0c0b;
+  --color-brand-white: #f5f2e8;
+}
+
 @theme {
   --font-inter: Inter, sans-serif;
   --font-raleway: Raleway, sans-serif;
@@ -16,23 +42,13 @@
 
   --animate-fade-in: fadeIn 0.5s ease-in-out;
 
-  --color-brand-primary: #0e1c38;
-  --color-brand-primary-50: #bdcdee;
-  --color-brand-primary-100: #94afe4;
-  --color-brand-primary-200: #4271d0;
-  --color-brand-primary-300: #22458a;
-  --color-brand-primary-400: #0e1c38;
-  --color-brand-primary-500: #0c1830;
-  --color-brand-primary-600: #0a1428;
-  --color-brand-primary-700: #081020;
-  --color-brand-primary-800: #060c17;
-  --color-brand-primary-900: #04080f;
-  --color-brand-primary-950: #03060b;
-  --color-brand-white: #f4f6fb;
-
   --container-8xl: 90rem;
   --container-9xl: 100rem;
   --container-10xl: 110rem;
+}
+
+:root {
+  color-scheme: dark;
 }
 
 @keyframes fadeIn {

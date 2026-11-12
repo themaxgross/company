@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-brand-primary dark:border-brand-white">
+    <footer className="border-t border-brand-primary dark:border-brand-gold-400">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <p className="text-center text-base text-gray-400">
           © 2023 by Leo Ji LLC. All rights reserved.

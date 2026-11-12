@@ -17,7 +17,7 @@ export default function Contact() {
         You can complete the form below, or email me at{" "}
         <a
           href="mailto:hello@leoji.company"
-          className="text-brand-primary hover:text-brand-primary-600 dark:text-brand-primary-200 dark:hover:text-brand-primary-100"
+          className="text-brand-primary hover:text-brand-primary-600 dark:text-brand-gold-200 dark:hover:text-brand-gold-100"
         >
           hello@leoji.company
         </a>
